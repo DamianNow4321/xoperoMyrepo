@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RatujLudzi
+namespace cw3
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +23,15 @@ namespace RatujLudzi
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            string name = "Quentin";
+            int x = 3;
+            x = x * 17;
+            double d = Math.PI / 2;
+            MyLabel.Text = "Nazwa to "+name+"\nx jest równe "+x+"\nd jest równe "+d;
         }
     }
 }
