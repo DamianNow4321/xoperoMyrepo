@@ -20,10 +20,10 @@
             <ColumnDefinition Width="100*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="button1" Content="Pokaż Komunikat" HorizontalAlignment="Center" VerticalAlignment="Center" Width="113" Click="button1_Click"/>
-        <Button x:Name="button3" Content="Sprawdzanie kolejnego warunku" HorizontalAlignment="Center" Margin="1,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="180"/>
+        <Button x:Name="button3" Content="Sprawdzanie kolejnego warunku" HorizontalAlignment="Center" Margin="1,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="180" Click="button3_Click"/>
         <TextBlock x:Name="MyLabel" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center"/>
-        <Button x:Name="button2" Content="If/Else" Grid.Column="2" HorizontalAlignment="Center" Margin="-2,0,0,0" VerticalAlignment="Center"/>
-        <Button x:Name="button4" Content="Pętla" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center"/>
+        <Button x:Name="button2" Content="If/Else" Grid.Column="2" HorizontalAlignment="Center" Margin="-2,0,0,0" VerticalAlignment="Center" Click="button2_Click"/>
+        <Button x:Name="button4" Content="Pętla" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" Click="button4_Click"/>
 
     </Grid>
 </Window>

@@ -33,5 +33,43 @@ namespace cw3
             double d = Math.PI / 2;
             MyLabel.Text = "Nazwa to "+name+"\nx jest równe "+x+"\nd jest równe "+d;
         }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            int x = 5;
+            if (x == 10)
+            {
+                MyLabel.Text = "x musi być równe 10";
+            }
+            else
+            {
+                MyLabel.Text = "x nie jest równe 10";
+            }
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            int sValue = 4;
+            string name = "Krzysiek";
+            if((sValue==3) && (name.Equals("Jan")))
+            {
+                MyLabel.Text = "sValue jest równe 3 i name Jan";
+            }
+            MyLabel.Text = "Ten Wiersz jest wykonwany bez względu na warunek";
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            int count = 0;
+            while (count < 10)
+            {
+                count++;
+            }
+            for(int i = 0; i < 5; i++)
+            {
+                count--;
+            }
+            MyLabel.Text = "Odpowiedź brzmi " + count;
+        }
     }
 }
