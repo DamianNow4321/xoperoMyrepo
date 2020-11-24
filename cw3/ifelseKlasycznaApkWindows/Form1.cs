@@ -36,6 +36,7 @@ namespace ifelseKlasycznaApkWindows
             else
             {
                 label1.Text = "Zmiana tekstu wyłączona";
+                label1.TextAlign = ContentAlignment.MiddleCenter;
             }
         }
     }
