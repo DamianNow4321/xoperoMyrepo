@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tlo", "ResztaCwiczen\tlo.csproj", "{52333680-61AA-4C09-A36A-369F965898F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "klasaprostyprogram", "klasaprostyprogram\klasaprostyprogram.csproj", "{B1E4ADEF-CF1B-4C1E-957D-27D933AA1910}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{52333680-61AA-4C09-A36A-369F965898F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52333680-61AA-4C09-A36A-369F965898F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52333680-61AA-4C09-A36A-369F965898F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1E4ADEF-CF1B-4C1E-957D-27D933AA1910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1E4ADEF-CF1B-4C1E-957D-27D933AA1910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1E4ADEF-CF1B-4C1E-957D-27D933AA1910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1E4ADEF-CF1B-4C1E-957D-27D933AA1910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
