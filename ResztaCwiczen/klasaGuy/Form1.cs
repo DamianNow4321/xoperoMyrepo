@@ -18,10 +18,8 @@ namespace klasaGuy
         public Form1()
         {
             InitializeComponent();
-            joe = new Guy();
-            joe.Name = "Joe";
-            joe.Cash = 50;
-            bob = new Guy();
+            joe = new Guy() { Cash=50 ,Name="Joe"};
+            bob = new Guy() { Cash=100 ,Name = "Bob" };
             bob.Name = "Bob";
             bob.Cash = 100;
         }
@@ -48,6 +46,18 @@ namespace klasaGuy
         private void button2_Click(object sender, EventArgs e)
         {
             bank += bob.GiveCash(5);
+            UpdateForm();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            bob.ReceiveCash(joe.GiveCash(10));
+            UpdateForm();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            joe.ReceiveCash(bob.GiveCash(5));
             UpdateForm();
         }
     }
