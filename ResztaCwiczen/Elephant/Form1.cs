@@ -39,5 +39,12 @@ namespace Elephant
             lloyd = hold;
             MessageBox.Show("Obiekty zamienione");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            lloyd = lucinda;
+            lloyd.EarSize=4512;
+            lloyd.WhoAmI();
+        }
     }
 }
