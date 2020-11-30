@@ -21,7 +21,6 @@ namespace KalkulatorKrow
         private void Form1_Load(object sender, EventArgs e)
         {
             farmer = new Farmer(15, 30);
-
         }
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
