@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Drawing;
 namespace DzienNaWyscigach
 {
     class Greyhound
@@ -15,8 +15,11 @@ namespace DzienNaWyscigach
         public int Location=0;
         public Random MyRandom;
         public bool Run() {
-            myPicture.Left += MyRandom.Next(1,4);
-            myPicture.Update();
+            MyRandom = new Random();
+            int dst = MyRandom.Next(1, 5);
+            Point x = myPicture.Location;
+            x.X += dst;
+            myPicture.Location = x;
             if (myPicture.Left >= racetrackLength)
             {
                 return true;
@@ -29,7 +32,9 @@ namespace DzienNaWyscigach
         }
         public void takeStartingPosition()
         {
-            myPicture.Left = 0;
+            Point x = myPicture.Location;
+            x.X = Location;
+            myPicture.Location = x;
         }
 
     }

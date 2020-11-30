@@ -29,106 +29,116 @@ namespace DzienNaWyscigach
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.janekBtn = new System.Windows.Forms.RadioButton();
+            this.bartekBtn = new System.Windows.Forms.RadioButton();
+            this.arekBtn = new System.Windows.Forms.RadioButton();
+            this.minimumBet = new System.Windows.Forms.Label();
+            this.bettorName = new System.Windows.Forms.Label();
+            this.betBtn = new System.Windows.Forms.Button();
+            this.betAmount = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.raceBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.dogNr = new System.Windows.Forms.NumericUpDown();
+            this.janekBet = new System.Windows.Forms.Label();
+            this.bartekBet = new System.Windows.Forms.Label();
+            this.arekBet = new System.Windows.Forms.Label();
+            this.dog4 = new System.Windows.Forms.PictureBox();
+            this.dog3 = new System.Windows.Forms.PictureBox();
+            this.dog2 = new System.Windows.Forms.PictureBox();
+            this.dog1 = new System.Windows.Forms.PictureBox();
+            this.race = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.betAmount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dogNr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.race)).BeginInit();
             this.SuspendLayout();
             // 
-            // radioButton1
+            // janekBtn
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(34, 327);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.janekBtn.AutoSize = true;
+            this.janekBtn.Location = new System.Drawing.Point(34, 327);
+            this.janekBtn.Name = "janekBtn";
+            this.janekBtn.Size = new System.Drawing.Size(54, 17);
+            this.janekBtn.TabIndex = 0;
+            this.janekBtn.TabStop = true;
+            this.janekBtn.Text = "Janek";
+            this.janekBtn.UseVisualStyleBackColor = true;
+            this.janekBtn.CheckedChanged += new System.EventHandler(this.janekBtn_CheckedChanged);
             // 
-            // radioButton2
+            // bartekBtn
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(34, 350);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.bartekBtn.AutoSize = true;
+            this.bartekBtn.Location = new System.Drawing.Point(34, 350);
+            this.bartekBtn.Name = "bartekBtn";
+            this.bartekBtn.Size = new System.Drawing.Size(56, 17);
+            this.bartekBtn.TabIndex = 1;
+            this.bartekBtn.TabStop = true;
+            this.bartekBtn.Text = "Bartek";
+            this.bartekBtn.UseVisualStyleBackColor = true;
+            this.bartekBtn.CheckedChanged += new System.EventHandler(this.bartekBtn_CheckedChanged);
             // 
-            // radioButton3
+            // arekBtn
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(34, 373);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.arekBtn.AutoSize = true;
+            this.arekBtn.Location = new System.Drawing.Point(34, 373);
+            this.arekBtn.Name = "arekBtn";
+            this.arekBtn.Size = new System.Drawing.Size(47, 17);
+            this.arekBtn.TabIndex = 2;
+            this.arekBtn.TabStop = true;
+            this.arekBtn.Text = "Arek";
+            this.arekBtn.UseVisualStyleBackColor = true;
+            this.arekBtn.CheckedChanged += new System.EventHandler(this.arekBtn_CheckedChanged);
             // 
-            // label1
+            // minimumBet
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 308);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.minimumBet.AutoSize = true;
+            this.minimumBet.Location = new System.Drawing.Point(34, 308);
+            this.minimumBet.Name = "minimumBet";
+            this.minimumBet.Size = new System.Drawing.Size(84, 13);
+            this.minimumBet.TabIndex = 3;
+            this.minimumBet.Text = "Minimalna liczba";
             // 
-            // label2
+            // bettorName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 416);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.bettorName.AutoSize = true;
+            this.bettorName.Location = new System.Drawing.Point(34, 416);
+            this.bettorName.Name = "bettorName";
+            this.bettorName.Size = new System.Drawing.Size(35, 13);
+            this.bettorName.TabIndex = 4;
+            this.bettorName.Text = "label2";
             // 
-            // button1
+            // betBtn
             // 
-            this.button1.Location = new System.Drawing.Point(75, 411);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.betBtn.Location = new System.Drawing.Point(75, 411);
+            this.betBtn.Name = "betBtn";
+            this.betBtn.Size = new System.Drawing.Size(75, 23);
+            this.betBtn.TabIndex = 5;
+            this.betBtn.Text = "stawia";
+            this.betBtn.UseVisualStyleBackColor = true;
+            this.betBtn.Click += new System.EventHandler(this.betBtn_Click);
             // 
-            // numericUpDown1
+            // betAmount
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(165, 414);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.betAmount.Location = new System.Drawing.Point(165, 414);
+            this.betAmount.Maximum = new decimal(new int[] {
             15,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.betAmount.Minimum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(36, 20);
-            this.numericUpDown1.TabIndex = 6;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.betAmount.Name = "betAmount";
+            this.betAmount.Size = new System.Drawing.Size(36, 20);
+            this.betAmount.TabIndex = 6;
+            this.betAmount.Value = new decimal(new int[] {
             5,
             0,
             0,
@@ -144,46 +154,15 @@ namespace DzienNaWyscigach
             this.label3.Text = "zł na charta nr";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // pictureBox1
+            // raceBtn
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(34, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(34, 68);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(34, 124);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(34, 180);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(598, 308);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 88);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Start";
-            this.button2.UseVisualStyleBackColor = true;
+            this.raceBtn.Location = new System.Drawing.Point(487, 314);
+            this.raceBtn.Name = "raceBtn";
+            this.raceBtn.Size = new System.Drawing.Size(150, 88);
+            this.raceBtn.TabIndex = 12;
+            this.raceBtn.Text = "Start";
+            this.raceBtn.UseVisualStyleBackColor = true;
+            this.raceBtn.Click += new System.EventHandler(this.raceBtn_Click);
             // 
             // label4
             // 
@@ -194,56 +173,145 @@ namespace DzienNaWyscigach
             this.label4.TabIndex = 13;
             this.label4.Text = "Zakłady";
             // 
-            // numericUpDown2
+            // dogNr
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(289, 414);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.dogNr.Location = new System.Drawing.Point(289, 414);
+            this.dogNr.Maximum = new decimal(new int[] {
             4,
             0,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.dogNr.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(36, 20);
-            this.numericUpDown2.TabIndex = 14;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.dogNr.Name = "dogNr";
+            this.dogNr.Size = new System.Drawing.Size(36, 20);
+            this.dogNr.TabIndex = 14;
+            this.dogNr.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            // 
+            // janekBet
+            // 
+            this.janekBet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.janekBet.Location = new System.Drawing.Point(238, 327);
+            this.janekBet.Name = "janekBet";
+            this.janekBet.Size = new System.Drawing.Size(207, 17);
+            this.janekBet.TabIndex = 15;
+            this.janekBet.Text = "label5";
+            // 
+            // bartekBet
+            // 
+            this.bartekBet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bartekBet.Location = new System.Drawing.Point(238, 351);
+            this.bartekBet.Name = "bartekBet";
+            this.bartekBet.Size = new System.Drawing.Size(207, 17);
+            this.bartekBet.TabIndex = 16;
+            this.bartekBet.Text = "label6";
+            // 
+            // arekBet
+            // 
+            this.arekBet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.arekBet.Location = new System.Drawing.Point(238, 378);
+            this.arekBet.Name = "arekBet";
+            this.arekBet.Size = new System.Drawing.Size(207, 17);
+            this.arekBet.TabIndex = 17;
+            this.arekBet.Text = "label7";
+            // 
+            // dog4
+            // 
+            this.dog4.Image = global::DzienNaWyscigach.Properties.Resources.dog;
+            this.dog4.Location = new System.Drawing.Point(34, 180);
+            this.dog4.Name = "dog4";
+            this.dog4.Size = new System.Drawing.Size(79, 19);
+            this.dog4.TabIndex = 11;
+            this.dog4.TabStop = false;
+            // 
+            // dog3
+            // 
+            this.dog3.Image = global::DzienNaWyscigach.Properties.Resources.dog;
+            this.dog3.Location = new System.Drawing.Point(37, 120);
+            this.dog3.Name = "dog3";
+            this.dog3.Size = new System.Drawing.Size(76, 22);
+            this.dog3.TabIndex = 10;
+            this.dog3.TabStop = false;
+            // 
+            // dog2
+            // 
+            this.dog2.Image = global::DzienNaWyscigach.Properties.Resources.dog;
+            this.dog2.Location = new System.Drawing.Point(34, 66);
+            this.dog2.Name = "dog2";
+            this.dog2.Size = new System.Drawing.Size(79, 21);
+            this.dog2.TabIndex = 9;
+            this.dog2.TabStop = false;
+            // 
+            // dog1
+            // 
+            this.dog1.Image = global::DzienNaWyscigach.Properties.Resources.dog;
+            this.dog1.Location = new System.Drawing.Point(34, 22);
+            this.dog1.Name = "dog1";
+            this.dog1.Size = new System.Drawing.Size(79, 21);
+            this.dog1.TabIndex = 8;
+            this.dog1.TabStop = false;
+            // 
+            // race
+            // 
+            this.race.Image = global::DzienNaWyscigach.Properties.Resources.racetrack;
+            this.race.Location = new System.Drawing.Point(34, 12);
+            this.race.Name = "race";
+            this.race.Size = new System.Drawing.Size(603, 205);
+            this.race.TabIndex = 18;
+            this.race.TabStop = false;
+            this.race.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(34, 289);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(603, 152);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dom bukmacherski";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.numericUpDown2);
+            this.ClientSize = new System.Drawing.Size(680, 453);
+            this.Controls.Add(this.arekBet);
+            this.Controls.Add(this.bartekBet);
+            this.Controls.Add(this.janekBet);
+            this.Controls.Add(this.dogNr);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.raceBtn);
+            this.Controls.Add(this.dog4);
+            this.Controls.Add(this.dog3);
+            this.Controls.Add(this.dog2);
+            this.Controls.Add(this.dog1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.betAmount);
+            this.Controls.Add(this.betBtn);
+            this.Controls.Add(this.bettorName);
+            this.Controls.Add(this.minimumBet);
+            this.Controls.Add(this.arekBtn);
+            this.Controls.Add(this.bartekBtn);
+            this.Controls.Add(this.janekBtn);
+            this.Controls.Add(this.race);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.betAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dogNr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dog1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.race)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,21 +319,26 @@ namespace DzienNaWyscigach
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.RadioButton janekBtn;
+        private System.Windows.Forms.RadioButton bartekBtn;
+        private System.Windows.Forms.RadioButton arekBtn;
+        private System.Windows.Forms.Label minimumBet;
+        private System.Windows.Forms.Label bettorName;
+        private System.Windows.Forms.Button betBtn;
+        private System.Windows.Forms.NumericUpDown betAmount;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox dog1;
+        private System.Windows.Forms.PictureBox dog2;
+        private System.Windows.Forms.PictureBox dog3;
+        private System.Windows.Forms.PictureBox dog4;
+        private System.Windows.Forms.Button raceBtn;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown dogNr;
+        private System.Windows.Forms.Label janekBet;
+        private System.Windows.Forms.Label bartekBet;
+        private System.Windows.Forms.Label arekBet;
+        private System.Windows.Forms.PictureBox race;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

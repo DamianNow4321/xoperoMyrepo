@@ -7,44 +7,47 @@ using System.Windows.Forms;
 
 namespace DzienNaWyscigach
 {
-    class Guy
+    public class Guy
     {
         public string Name;
-        public int Bet;
+        public Bet myBet;
         public int Cash;
         public RadioButton myRadiobutton;
         public Label myLabel;
 
+        public Guy(string Name, Bet myBet, int Cash, RadioButton myRadiobutton, Label myLabel)
+        {
+            this.Name = Name;
+            this.myBet = myBet;
+            this.Cash = Cash;
+            this.myRadiobutton = myRadiobutton;
+            this.myLabel = myLabel;
+        }
         public void UpdateLabels()
         {
+            if (myBet == null)
+            {
+                myLabel.Text = Name+" nie postawił jeszcze nic";
+            }
+            else
+            {
+                myLabel.Text = myBet.GetDesc();
+            }
+        }
+        public void clearBet() { myBet.Amount = 0; }
+        public bool PlaceBet(int Amount, int Dog)
+        {
+            if (Amount <= Cash)
+            {
+                myBet = new Bet(Amount, Dog, this);
+                return true;
+            }
+            return false;
+        }
 
-        }
-        public void clearBet() { }
-        public int GiveCash(int amount)
+        public void Collect(int Winner)
         {
-            if (amount <= Cash && amount > 0)
-            {
-                Cash -= amount;
-                return amount;
-            }
-            else
-            {
-                MessageBox.Show("Nie mam wystarczającej ilości pieniędzy, aby ci dać " + amount, Name + " powiedział...");
-                return 0;
-            }
-        }
-        public int ReceiveCash(int amount)
-        {
-            if (amount > 0)
-            {
-                Cash += amount;
-                return amount;
-            }
-            else
-            {
-                MessageBox.Show(amount + "to nie jest ilość pieniędzy, jaką mogę wziąć ", Name + "powiedział...");
-                return 0;
-            }
+            Cash += myBet.PayOut(Winner);
         }
     }
 }
