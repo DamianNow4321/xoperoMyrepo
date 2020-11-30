@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kontrolki s219", "Kontrolki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DzienNaWyscigach", "DzienNaWyscigach\DzienNaWyscigach.csproj", "{F8923E15-496C-4B0D-83DA-2A65E4E1E266}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanistaPrzyjec", "PlanistaPrzyjec\PlanistaPrzyjec.csproj", "{10A1BFB0-3C6D-45A7-8870-94EBE334192F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{F8923E15-496C-4B0D-83DA-2A65E4E1E266}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8923E15-496C-4B0D-83DA-2A65E4E1E266}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8923E15-496C-4B0D-83DA-2A65E4E1E266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10A1BFB0-3C6D-45A7-8870-94EBE334192F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A1BFB0-3C6D-45A7-8870-94EBE334192F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A1BFB0-3C6D-45A7-8870-94EBE334192F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A1BFB0-3C6D-45A7-8870-94EBE334192F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
