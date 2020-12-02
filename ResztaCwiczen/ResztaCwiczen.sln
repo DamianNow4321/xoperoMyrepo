@@ -31,13 +31,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zlodziej", "Zlodziej\Zlodzi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemZarządzaniaUlem", "SystemZarządzaniaUlem\SystemZarządzaniaUlem.csproj", "{80D4D082-3B99-4383-AA67-7DDF23BA9774}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cw3", "..\cw3\cw3\cw3.csproj", "{E9FAE2A6-24F2-4B60-B7B9-817385F031E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cw3", "cw3\cw3.csproj", "{E9FAE2A6-24F2-4B60-B7B9-817385F031E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ifelseKlasycznaApkWindows", "..\cw3\ifelseKlasycznaApkWindows\ifelseKlasycznaApkWindows.csproj", "{F360F00A-DAA0-4067-8FBA-4862B7242BE4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ifelseKlasycznaApkWindows", "ifelseKlasycznaApkWindows\ifelseKlasycznaApkWindows.csproj", "{F360F00A-DAA0-4067-8FBA-4862B7242BE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "..\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1.csproj", "{0D245CBA-A5F8-4232-ADE6-8619DD4EE044}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{0D245CBA-A5F8-4232-ADE6-8619DD4EE044}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RatujLudzi", "..\RatujLudzi\RatujLudzi.csproj", "{AD1A239F-1491-42BD-8A75-27AF6FA8A8B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RatujLudzi", "RatujLudzi\RatujLudzi.csproj", "{AD1A239F-1491-42BD-8A75-27AF6FA8A8B2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ifelse", "basen\ifelse.csproj", "{FF2DF642-3DD3-4954-910E-ABCAE77EDCBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{AD1A239F-1491-42BD-8A75-27AF6FA8A8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD1A239F-1491-42BD-8A75-27AF6FA8A8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD1A239F-1491-42BD-8A75-27AF6FA8A8B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF2DF642-3DD3-4954-910E-ABCAE77EDCBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF2DF642-3DD3-4954-910E-ABCAE77EDCBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF2DF642-3DD3-4954-910E-ABCAE77EDCBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF2DF642-3DD3-4954-910E-ABCAE77EDCBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
