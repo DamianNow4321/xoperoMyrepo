@@ -9,7 +9,7 @@ namespace PlanistaPrzyjec
     class DinnerParty
     {
         public const int CostOfFoodPerPerson = 25;
-        public int NumberOfPeople;
+        private int NumberOfPeople;
         public decimal CostOfBeveragesPerPerson;
         public decimal CostOfDecorations = 0;
         public void SetHealthyOption(bool healthyOption)
@@ -33,6 +33,14 @@ namespace PlanistaPrzyjec
             {
                 CostOfDecorations = (NumberOfPeople * 7.50M) + 30M;
             }
+        }
+        public void setPartyOptions(int people,bool fancy)
+        {
+            NumberOfPeople=people;
+            CalculateCostOfDecorations(fancy);
+        }
+        public int getNumberOfPeople(){
+            return NumberOfPeople;
         }
         public decimal CalculateCost(bool healthyOption)
         {

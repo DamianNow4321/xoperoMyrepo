@@ -16,7 +16,7 @@ namespace PlanistaPrzyjec
         public Form1()
         {
             InitializeComponent();
-            dinnerParty = new DinnerParty() { NumberOfPeople = 5 };
+            dinnerParty = new DinnerParty();
             dinnerParty.CalculateCostOfDecorations(checkBox1.Checked);
             dinnerParty.SetHealthyOption(checkBox2.Checked);
             DisplayDinnerPartyCost();
@@ -36,7 +36,8 @@ namespace PlanistaPrzyjec
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            dinnerParty.NumberOfPeople = (int)numericUpDown1.Value;
+            dinnerParty.setPartyOptions((int)numericUpDown1.Value,checkBox1.Checked);
+            
             DisplayDinnerPartyCost();
         }
         private void DisplayDinnerPartyCost()
