@@ -30,26 +30,70 @@ namespace SystemZarządzaniaUlem
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.report = new System.Windows.Forms.RichTextBox();
+            this.assignBtn = new System.Windows.Forms.Button();
+            this.shifts = new System.Windows.Forms.NumericUpDown();
+            this.workBeeJob = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.nxtShift = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shifts)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.nxtShift);
+            this.groupBox1.Controls.Add(this.report);
+            this.groupBox1.Controls.Add(this.assignBtn);
+            this.groupBox1.Controls.Add(this.shifts);
+            this.groupBox1.Controls.Add(this.workBeeJob);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(299, 206);
+            this.groupBox1.Size = new System.Drawing.Size(517, 249);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Przydział prac robotnikom";
+            // 
+            // report
+            // 
+            this.report.Location = new System.Drawing.Point(7, 95);
+            this.report.Name = "report";
+            this.report.Size = new System.Drawing.Size(504, 140);
+            this.report.TabIndex = 4;
+            this.report.Text = "";
+            // 
+            // assignBtn
+            // 
+            this.assignBtn.Location = new System.Drawing.Point(10, 65);
+            this.assignBtn.Name = "assignBtn";
+            this.assignBtn.Size = new System.Drawing.Size(266, 23);
+            this.assignBtn.TabIndex = 3;
+            this.assignBtn.Text = "Przypisz tą pracę pszczole";
+            this.assignBtn.UseVisualStyleBackColor = true;
+            this.assignBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // shifts
+            // 
+            this.shifts.Location = new System.Drawing.Point(138, 37);
+            this.shifts.Name = "shifts";
+            this.shifts.Size = new System.Drawing.Size(138, 20);
+            this.shifts.TabIndex = 2;
+            // 
+            // workBeeJob
+            // 
+            this.workBeeJob.FormattingEnabled = true;
+            this.workBeeJob.Items.AddRange(new object[] {
+            "Zbieranie nektaru",
+            "Wytwarzanie miodu",
+            "Pielęgnacja jaj",
+            "Nauczanie pszczułek",
+            "Utrzymanie ula",
+            "Patrol z żadłami"});
+            this.workBeeJob.Location = new System.Drawing.Point(10, 37);
+            this.workBeeJob.Name = "workBeeJob";
+            this.workBeeJob.Size = new System.Drawing.Size(121, 21);
+            this.workBeeJob.TabIndex = 1;
             // 
             // label1
             // 
@@ -60,41 +104,27 @@ namespace SystemZarządzaniaUlem
             this.label1.TabIndex = 0;
             this.label1.Text = "Zadanie robotnicy";
             // 
-            // comboBox1
+            // nxtShift
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(10, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(138, 37);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(10, 65);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(258, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Przypisz tą pracę pszczole";
-            this.button1.UseVisualStyleBackColor = true;
+            this.nxtShift.Location = new System.Drawing.Point(309, 9);
+            this.nxtShift.Name = "nxtShift";
+            this.nxtShift.Size = new System.Drawing.Size(202, 79);
+            this.nxtShift.TabIndex = 5;
+            this.nxtShift.Text = "Przepracuj następną zmianę";
+            this.nxtShift.UseVisualStyleBackColor = true;
+            this.nxtShift.Click += new System.EventHandler(this.nxtShift_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 115);
+            this.ClientSize = new System.Drawing.Size(541, 273);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shifts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -102,10 +132,12 @@ namespace SystemZarządzaniaUlem
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button assignBtn;
+        private System.Windows.Forms.NumericUpDown shifts;
+        private System.Windows.Forms.ComboBox workBeeJob;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox report;
+        private System.Windows.Forms.Button nxtShift;
     }
 }
 
