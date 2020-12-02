@@ -46,6 +46,7 @@ namespace PlanistaPrzyjec
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ilość osób";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // numericUpDown1
             // 
@@ -85,6 +86,7 @@ namespace PlanistaPrzyjec
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Koszt";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // koszt
             // 
@@ -95,6 +97,7 @@ namespace PlanistaPrzyjec
             this.koszt.Size = new System.Drawing.Size(37, 15);
             this.koszt.TabIndex = 5;
             this.koszt.Text = "label3";
+            this.koszt.Click += new System.EventHandler(this.koszt_Click);
             // 
             // Form1
             // 

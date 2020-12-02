@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanistaPrzyjec", "Planista
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalkulatorKrow", "KalkulatorKrow\KalkulatorKrow.csproj", "{FD068A96-A035-42FE-B0A3-578602CE20B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanistaPrzyjec2.0", "PlanistaPrzyjec2.0\PlanistaPrzyjec2.0.csproj", "{5E847AA2-7FBE-4421-B089-001101F225CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{FD068A96-A035-42FE-B0A3-578602CE20B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD068A96-A035-42FE-B0A3-578602CE20B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD068A96-A035-42FE-B0A3-578602CE20B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E847AA2-7FBE-4421-B089-001101F225CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E847AA2-7FBE-4421-B089-001101F225CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E847AA2-7FBE-4421-B089-001101F225CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E847AA2-7FBE-4421-B089-001101F225CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
