@@ -41,7 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RatujLudzi", "RatujLudzi\Ra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ifelse", "basen\ifelse.csproj", "{FF2DF642-3DD3-4954-910E-ABCAE77EDCBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfejsyS336", "InterfejsyS336\InterfejsyS336.csproj", "{5F56ED24-8B09-4380-A562-C7EE22D616DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfejsyS336", "InterfejsyS336\InterfejsyS336.csproj", "{5F56ED24-8B09-4380-A562-C7EE22D616DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetMission", "PlanetMission\PlanetMission.csproj", "{A4D1C823-5817-42E1-8B39-6881907C33D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{5F56ED24-8B09-4380-A562-C7EE22D616DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F56ED24-8B09-4380-A562-C7EE22D616DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F56ED24-8B09-4380-A562-C7EE22D616DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4D1C823-5817-42E1-8B39-6881907C33D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D1C823-5817-42E1-8B39-6881907C33D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D1C823-5817-42E1-8B39-6881907C33D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D1C823-5817-42E1-8B39-6881907C33D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
