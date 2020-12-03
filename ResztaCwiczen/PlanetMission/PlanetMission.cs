@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace PlanetMission
 {
-    class PlanetMission
+    abstract class PlanetMission
     {
         public long RocketFuelPerMile;
         public long RocketSpeedMPH;
         public int MilesToPlanet;
+        public abstract void SetMissionInfo(int milesToPlanet, int rocketFuelPerMile, long rocketSpeedMPH);
         public long UnitsOfFuelNeeded()
         {
             return MilesToPlanet * RocketFuelPerMile;

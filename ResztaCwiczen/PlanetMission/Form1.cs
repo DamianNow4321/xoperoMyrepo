@@ -31,8 +31,6 @@ namespace PlanetMission
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PlanetMission planet = new PlanetMission();
-            MessageBox.Show(planet.FuelNeeded());
         }
     }
 }

@@ -9,9 +9,13 @@ namespace PlanetMission
     class Venus : PlanetMission
     {
         public Venus(){
-        MilesToPlanet = 40000000;
-        RocketFuelPerMile = 100000;
-        RocketSpeedMPH = 25000;
-        }    
+            SetMissionInfo(40000000, 100000, 25000);
+        }
+        public override void SetMissionInfo(int milesToPlanet, int rocketFuelPerMile,long rocketSpeedMPH)
+        {
+            this.MilesToPlanet = milesToPlanet;
+            this.RocketFuelPerMile = rocketFuelPerMile;
+            this.RocketSpeedMPH = rocketSpeedMPH;
+        }
     }
 }
