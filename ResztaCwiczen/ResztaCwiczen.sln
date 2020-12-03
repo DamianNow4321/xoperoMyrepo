@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetMission", "PlanetMiss
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basen_S365", "Basen_S365\Basen_S365.csproj", "{1F31A3FE-F5AF-43F3-8108-2E3C07CD2CDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZbudujmyDom", "ZbudujmyDom\ZbudujmyDom.csproj", "{D295AEAD-9328-4B66-86D2-712794E4B590}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{1F31A3FE-F5AF-43F3-8108-2E3C07CD2CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F31A3FE-F5AF-43F3-8108-2E3C07CD2CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F31A3FE-F5AF-43F3-8108-2E3C07CD2CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D295AEAD-9328-4B66-86D2-712794E4B590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D295AEAD-9328-4B66-86D2-712794E4B590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D295AEAD-9328-4B66-86D2-712794E4B590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D295AEAD-9328-4B66-86D2-712794E4B590}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
