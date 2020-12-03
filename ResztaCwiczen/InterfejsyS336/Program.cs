@@ -23,8 +23,13 @@ namespace InterfejsyS336
         }
         static void Main(string[] args)
         {
-            Tallguy tallguy = new Tallguy { Height = 100, Name = "Adam" };
-            tallguy.Honk();
+            ScaryScary fingersTheClown = new ScaryScary("duże buty", 14);
+            FunnyFunny someFunnyClown = fingersTheClown;
+            IScaryClown someOtherScaryClown = someFunnyClown as ScaryScary;
+            someOtherScaryClown.Honk();
+            Console.WriteLine(someOtherScaryClown.ScaryThingIHave);
+            someOtherScaryClown.ScareLittleChildren();
+            Console.ReadKey();
         }
     }
 }
