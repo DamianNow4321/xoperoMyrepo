@@ -6,7 +6,7 @@ namespace ListaKaczkiStr403
 {
     enum SortCriteria
     {
-        SizeThenKind,
-        KindThenSize,
+       SizeThenKind,
+       KindThenSize,
     }
 }
