@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZbudujmyDom", "ZbudujmyDom\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypyWylicz", "TypyWylicz\TypyWylicz.csproj", "{BC76EE4C-27BB-4152-8F6C-DF9DA95ACFB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnesyStr400", "MagnesyStr400\MagnesyStr400.csproj", "{C4FCA248-8596-4D68-8118-7008A20CA6D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{BC76EE4C-27BB-4152-8F6C-DF9DA95ACFB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC76EE4C-27BB-4152-8F6C-DF9DA95ACFB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC76EE4C-27BB-4152-8F6C-DF9DA95ACFB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4FCA248-8596-4D68-8118-7008A20CA6D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4FCA248-8596-4D68-8118-7008A20CA6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4FCA248-8596-4D68-8118-7008A20CA6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4FCA248-8596-4D68-8118-7008A20CA6D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
