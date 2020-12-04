@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypyWylicz", "TypyWylicz\Ty
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnesyStr400", "MagnesyStr400\MagnesyStr400.csproj", "{C4FCA248-8596-4D68-8118-7008A20CA6D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaKaczkiStr403", "ListaKaczkiStr403\ListaKaczkiStr403.csproj", "{B28BD251-4B63-43B9-A1D2-9DFE7EAF8A02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{C4FCA248-8596-4D68-8118-7008A20CA6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4FCA248-8596-4D68-8118-7008A20CA6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4FCA248-8596-4D68-8118-7008A20CA6D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28BD251-4B63-43B9-A1D2-9DFE7EAF8A02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28BD251-4B63-43B9-A1D2-9DFE7EAF8A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28BD251-4B63-43B9-A1D2-9DFE7EAF8A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28BD251-4B63-43B9-A1D2-9DFE7EAF8A02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
