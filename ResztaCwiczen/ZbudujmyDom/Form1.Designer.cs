@@ -33,6 +33,8 @@ namespace ZbudujmyDom
             this.ex = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.check = new System.Windows.Forms.Button();
+            this.hide = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Description
@@ -64,7 +66,7 @@ namespace ZbudujmyDom
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(13, 216);
+            this.button2.Location = new System.Drawing.Point(13, 266);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(253, 23);
             this.button2.TabIndex = 3;
@@ -72,11 +74,33 @@ namespace ZbudujmyDom
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // check
+            // 
+            this.check.Location = new System.Drawing.Point(13, 211);
+            this.check.Name = "check";
+            this.check.Size = new System.Drawing.Size(253, 23);
+            this.check.TabIndex = 4;
+            this.check.Text = "Sprawdź";
+            this.check.UseVisualStyleBackColor = true;
+            this.check.Click += new System.EventHandler(this.check_Click);
+            // 
+            // hide
+            // 
+            this.hide.Location = new System.Drawing.Point(13, 241);
+            this.hide.Name = "hide";
+            this.hide.Size = new System.Drawing.Size(253, 23);
+            this.hide.TabIndex = 5;
+            this.hide.Text = "Ukryj się";
+            this.hide.UseVisualStyleBackColor = true;
+            this.hide.Click += new System.EventHandler(this.hide_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 245);
+            this.ClientSize = new System.Drawing.Size(278, 301);
+            this.Controls.Add(this.hide);
+            this.Controls.Add(this.check);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ex);
@@ -94,6 +118,8 @@ namespace ZbudujmyDom
         private System.Windows.Forms.ComboBox ex;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button check;
+        private System.Windows.Forms.Button hide;
     }
 }
 
