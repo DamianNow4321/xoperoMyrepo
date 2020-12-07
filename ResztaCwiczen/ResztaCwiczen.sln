@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumeryKoszulekStr423", "Num
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RybyStr424", "RybyStr424\RybyStr424.csproj", "{0944B4EA-5575-4912-A490-A1D9E67173BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SniadanieDlaDrawliStr439", "SniadanieDlaDrawliStr439\SniadanieDlaDrawliStr439.csproj", "{A19F8EEA-624C-4F59-A825-B3DD6F93C693}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -177,6 +179,10 @@ Global
 		{0944B4EA-5575-4912-A490-A1D9E67173BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0944B4EA-5575-4912-A490-A1D9E67173BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0944B4EA-5575-4912-A490-A1D9E67173BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A19F8EEA-624C-4F59-A825-B3DD6F93C693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A19F8EEA-624C-4F59-A825-B3DD6F93C693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A19F8EEA-624C-4F59-A825-B3DD6F93C693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A19F8EEA-624C-4F59-A825-B3DD6F93C693}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
