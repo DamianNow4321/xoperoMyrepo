@@ -4,9 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace WymowkiStr463
 {
+    [Serializable]
     class Excuse
     {
         public string Description { get; set; }
@@ -23,26 +25,28 @@ namespace WymowkiStr463
         }
         public Excuse(Random random, string folder)
         {
-            string[] fileNames = Directory.GetFiles(folder, "*.txt");
+            string[] fileNames = Directory.GetFiles(folder, "*.excuse");
             OpenFile(fileNames[random.Next(fileNames.Length)]);
         }
         private void OpenFile(string excusePath)
         {
             this.ExcusePath = excusePath;
-            using (StreamReader reader = new StreamReader(excusePath))
+            BinaryFormatter formatter = new BinaryFormatter();
+            Excuse tempExcuse;
+            using (Stream input = File.OpenRead(excusePath))
             {
-                Description = reader.ReadLine();
-                Results = reader.ReadLine();
-                LastUsed = Convert.ToDateTime(reader.ReadLine());
+                tempExcuse = (Excuse)formatter.Deserialize(input);
             }
+            Description = tempExcuse.Description;
+            Results = tempExcuse.Results;
+            LastUsed = tempExcuse.LastUsed;
         }
         public void Save(string fileName)
         {
-            using (StreamWriter writer = new StreamWriter(fileName))
+            BinaryFormatter formatter = new BinaryFormatter();
+            using (Stream output = File.OpenWrite(fileName))
             {
-                writer.WriteLine(Description);
-                writer.WriteLine(Results);
-                writer.WriteLine(LastUsed);
+                formatter.Serialize(output, this);
             }
         }
     }

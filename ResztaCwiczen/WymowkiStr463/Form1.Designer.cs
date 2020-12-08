@@ -32,11 +32,11 @@ namespace WymowkiStr463
             this.label1 = new System.Windows.Forms.Label();
             this.description = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.result = new System.Windows.Forms.TextBox();
+            this.results = new System.Windows.Forms.TextBox();
             this.lastUsed = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.fileDate = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.folder = new System.Windows.Forms.Button();
@@ -74,12 +74,12 @@ namespace WymowkiStr463
             this.label2.TabIndex = 2;
             this.label2.Text = "Wyniki";
             // 
-            // result
+            // results
             // 
-            this.result.Location = new System.Drawing.Point(93, 54);
-            this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(290, 20);
-            this.result.TabIndex = 3;
+            this.results.Location = new System.Drawing.Point(93, 54);
+            this.results.Name = "results";
+            this.results.Size = new System.Drawing.Size(290, 20);
+            this.results.TabIndex = 3;
             // 
             // lastUsed
             // 
@@ -106,13 +106,13 @@ namespace WymowkiStr463
             this.label4.TabIndex = 6;
             this.label4.Text = "Data pliku";
             // 
-            // textBox3
+            // fileDate
             // 
-            this.textBox3.Location = new System.Drawing.Point(93, 108);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(290, 20);
-            this.textBox3.TabIndex = 7;
+            this.fileDate.Location = new System.Drawing.Point(93, 108);
+            this.fileDate.Name = "fileDate";
+            this.fileDate.ReadOnly = true;
+            this.fileDate.Size = new System.Drawing.Size(290, 20);
+            this.fileDate.TabIndex = 7;
             // 
             // openFileDialog1
             // 
@@ -180,11 +180,11 @@ namespace WymowkiStr463
             this.Controls.Add(this.open);
             this.Controls.Add(this.save);
             this.Controls.Add(this.folder);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.fileDate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lastUsed);
-            this.Controls.Add(this.result);
+            this.Controls.Add(this.results);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.description);
             this.Controls.Add(this.label1);
@@ -201,11 +201,11 @@ namespace WymowkiStr463
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox description;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox result;
+        private System.Windows.Forms.TextBox results;
         private System.Windows.Forms.DateTimePicker lastUsed;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox fileDate;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button folder;

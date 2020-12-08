@@ -21,17 +21,16 @@ namespace WymowkiStr463
         {
             InitializeComponent();
             currentExcuse.LastUsed = lastUsed.Value;
-
         }
         private void UpdateForm(bool changed)
         {
             if (!changed)
             {
                 this.description.Text = currentExcuse.Description;
-                this.result.Text = currentExcuse.Results;
+                this.results.Text = currentExcuse.Results;
                 this.lastUsed.Value = currentExcuse.LastUsed;
                 if (!String.IsNullOrEmpty(currentExcuse.ExcusePath))
-                    lastUsed.Text = File.GetLastWriteTime(currentExcuse.ExcusePath).ToString();
+                    fileDate.Text = File.GetLastWriteTime(currentExcuse.ExcusePath).ToString();
                 this.Text = "Manager wymówek";
             }
             else
@@ -59,18 +58,21 @@ namespace WymowkiStr463
 
         private void save_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(description.Text) || String.IsNullOrEmpty(result.Text))
+            if (String.IsNullOrEmpty(description.Text) || String.IsNullOrEmpty(results.Text))
             {
                 MessageBox.Show("Proszę wpisać wymówkę",
-                     "Zapis zakończony nie powowdzeniem", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                     "Zapis nieudany", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             saveFileDialog1.InitialDirectory = selectedFolder;
-            saveFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
-            saveFileDialog1.FileName = description.Text + ".txt";
-            DialogResult results = saveFileDialog1.ShowDialog();
-            if (results == DialogResult.OK)
+            saveFileDialog1.Filter = "Excuse pliki (*.excuse)|*.excuse|All files (*.*)|*.*";
+            saveFileDialog1.FileName = description.Text + ".excuse";
+            DialogResult result = saveFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
             {
+                currentExcuse.Description = description.Text;
+                currentExcuse.LastUsed = lastUsed.Value;
+                currentExcuse.Results = lastUsed.Text;
                 currentExcuse.Save(saveFileDialog1.FileName);
                 UpdateForm(false);
                 MessageBox.Show("Wymówka zapisana");
@@ -82,7 +84,7 @@ namespace WymowkiStr463
             if (CheckChanged())
             {
                 openFileDialog1.InitialDirectory = selectedFolder;
-                openFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog1.Filter = "Excuse pliki (*.excuse)|*.excuse|All files (*.*)|*.*";
                 openFileDialog1.FileName = description.Text + ".txt";
                 DialogResult result = openFileDialog1.ShowDialog();
                 if (result == DialogResult.OK)
