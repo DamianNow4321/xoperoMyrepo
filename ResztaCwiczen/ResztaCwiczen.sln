@@ -63,7 +63,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SniadanieDlaDrawliStr439", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnesyStreamWriter_Str447", "MagnesyStreamWriter_Str447\MagnesyStreamWriter_Str447.csproj", "{88C7D5BF-4820-49F1-8756-223DED0CB0E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "basenStr451", "basenStr451\basenStr451.csproj", "{9F866B6E-B6B1-449C-8200-233F25776DE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "basenStr451", "basenStr451\basenStr451.csproj", "{9F866B6E-B6B1-449C-8200-233F25776DE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WymowkiStr463", "WymowkiStr463\WymowkiStr463.csproj", "{AC2C326C-07AD-4773-8CD8-C1C1B14B744E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -195,6 +197,10 @@ Global
 		{9F866B6E-B6B1-449C-8200-233F25776DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F866B6E-B6B1-449C-8200-233F25776DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F866B6E-B6B1-449C-8200-233F25776DE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC2C326C-07AD-4773-8CD8-C1C1B14B744E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC2C326C-07AD-4773-8CD8-C1C1B14B744E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC2C326C-07AD-4773-8CD8-C1C1B14B744E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC2C326C-07AD-4773-8CD8-C1C1B14B744E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
