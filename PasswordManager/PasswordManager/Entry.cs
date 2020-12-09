@@ -22,8 +22,6 @@ namespace PasswordManager
             Password = password;
             Name = name;
         }
-
-
         public string Serialize(Entry objEntry)
         {
             string json = JsonConvert.SerializeObject(objEntry);
@@ -34,9 +32,9 @@ namespace PasswordManager
             Entry objEntry = JsonConvert.DeserializeObject<Entry>(Json);
             return objEntry;
         }
-        public string Hash(string json)
+        public static string Hash(string password)
         {
-            var bytes = new UTF8Encoding().GetBytes(json);
+            var bytes = new UTF8Encoding().GetBytes(password);
             byte[] hashBytes;
             using (var algorithm = new System.Security.Cryptography.SHA512Managed())
             {
@@ -73,6 +71,25 @@ namespace PasswordManager
             var objEntry = JsonConvert.DeserializeObject<List<Entry>>(fileDataRead);
             return objEntry;
         }
+        public static void changeMasterPassword(string MpassC)
+        {
+            string fileName = "mpass.json";
+            string pth = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"\Data", fileName);
+            if (!File.Exists(pth))
+            {
+                using (System.IO.StreamWriter sw = File.CreateText(pth))
+                {
 
+                }
+            }
+            System.IO.File.WriteAllText(pth, Hash(MpassC));
+        }
+        public static string loadMasterPassword()
+        {
+            string fileName = "mpass.json";
+            string pth = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"\Data", fileName);
+            string fileDataRead = File.ReadAllText(pth);
+            return fileDataRead;
+        }
     }
 }
