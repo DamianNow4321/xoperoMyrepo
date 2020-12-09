@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WymowkiStr463", "WymowkiStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanciarzStr446", "KanciarzStr446\KanciarzStr446.csproj", "{3422224B-373E-4038-8E78-97767B853CB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZapisOdczyt2ObiektówStr449", "ZapisOdczyt2ObiektówStr449\ZapisOdczyt2ObiektówStr449.csproj", "{F015336D-9B2B-477D-B450-AF745F749D5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -207,6 +209,10 @@ Global
 		{3422224B-373E-4038-8E78-97767B853CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3422224B-373E-4038-8E78-97767B853CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3422224B-373E-4038-8E78-97767B853CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F015336D-9B2B-477D-B450-AF745F749D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F015336D-9B2B-477D-B450-AF745F749D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F015336D-9B2B-477D-B450-AF745F749D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F015336D-9B2B-477D-B450-AF745F749D5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
