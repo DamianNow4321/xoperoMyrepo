@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanciarzStr446", "KanciarzS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZapisOdczyt2ObiektówStr449", "ZapisOdczyt2ObiektówStr449\ZapisOdczyt2ObiektówStr449.csproj", "{F015336D-9B2B-477D-B450-AF745F749D5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZabawaStr477", "ZabawaStr477\ZabawaStr477.csproj", "{BDC2B798-1105-455C-8EBC-D96521854F67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -213,6 +215,10 @@ Global
 		{F015336D-9B2B-477D-B450-AF745F749D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F015336D-9B2B-477D-B450-AF745F749D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F015336D-9B2B-477D-B450-AF745F749D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC2B798-1105-455C-8EBC-D96521854F67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC2B798-1105-455C-8EBC-D96521854F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC2B798-1105-455C-8EBC-D96521854F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC2B798-1105-455C-8EBC-D96521854F67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
