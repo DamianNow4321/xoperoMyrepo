@@ -91,5 +91,17 @@ namespace PasswordManager
             string fileDataRead = File.ReadAllText(pth);
             return fileDataRead;
         }
+        public static List<Entry> searchPasswords(string sName)
+        {
+            List<Entry> file = readFile();
+            for (int i = 0; i <= file.Count - 1; i++)
+            {
+                if(file[i].Name != sName)
+                {
+                    file.RemoveAt(i);
+                }
+            }
+            return file;
+        }
     }
 }

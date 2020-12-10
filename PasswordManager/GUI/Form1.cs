@@ -31,7 +31,12 @@ namespace GUI
         {
             richTextBox1.Text ="Nazwa: "+objEntry[listBox1.SelectedIndex].Name+Environment.NewLine+"Login: "+objEntry[listBox1.SelectedIndex].Login
                 + Environment.NewLine + "Hasło: " + objEntry[listBox1.SelectedIndex].Password;
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            objEntry=Entry.searchPasswords(textBox4.Text);
+            listBox1.DataSource = objEntry;
         }
     }
 }

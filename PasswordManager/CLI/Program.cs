@@ -18,7 +18,7 @@ namespace CLI
             string MPassC=Entry.loadMasterPassword();
             Console.WriteLine("Proszę wpisać hasło");
             mpass = Entry.Hash(Console.ReadLine());
-            bool firstTime=false;
+            bool firstTime=true;
             if (MPassC == "")
             {
                 firstTime = true;
@@ -28,7 +28,7 @@ namespace CLI
                 while (cont == true)
                 {
                     List<Entry> objEntry = Entry.readFile();
-                    Console.WriteLine("Jeśli chcesz wyświetlić zapisane hasła wpisz /check.Jeśli chcesz zmianić hasło dostępu wpisz /check. Jeśli chcesz dodać hasło wpisz /add. Jeśli chcesz zamkąć program wpisz /exit");
+                    Console.WriteLine("Jeśli chcesz wyświetlić zapisane hasła wpisz /check.Jeśli chcesz wyszukać hasło wpisz /search.Jeśli chcesz zmianić hasło dostępu wpisz /change. Jeśli chcesz dodać hasło wpisz /add. Jeśli chcesz zamkąć program wpisz /exit");
                     switch (Console.ReadLine())
                     {
                         case "/add":
@@ -45,6 +45,16 @@ namespace CLI
                             Mpassword = Console.ReadLine();
                             Mpassword = MPassC;
                             Entry.changeMasterPassword(MPassC);
+                            break;
+                        case "/search":
+                            Console.WriteLine($"Wpisz nazwę");
+                            string searchName = Console.ReadLine();
+                            objEntry=Entry.searchPasswords(searchName);
+                            for (int i = 0; i <= objEntry.Count - 1; i++)
+                            {
+                                Console.WriteLine("Nazwa: " + objEntry[i].Name + Environment.NewLine + "Login: " + objEntry[i].Login
+                                + Environment.NewLine + "Hasło: " + objEntry[i].Password);
+                            }
                             break;
                         case "/check":
                             for (int i = 0; i <= objEntry.Count - 1; i++)
