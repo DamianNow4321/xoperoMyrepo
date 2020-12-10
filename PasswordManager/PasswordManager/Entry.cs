@@ -79,7 +79,6 @@ namespace PasswordManager
             {
                 using (System.IO.StreamWriter sw = File.CreateText(pth))
                 {
-
                 }
             }
             System.IO.File.WriteAllText(pth, Hash(MpassC));
