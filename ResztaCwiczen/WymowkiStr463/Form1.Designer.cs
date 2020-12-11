@@ -130,6 +130,7 @@ namespace WymowkiStr463
             // 
             // save
             // 
+            this.save.Enabled = false;
             this.save.Location = new System.Drawing.Point(93, 140);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(75, 23);
@@ -140,6 +141,7 @@ namespace WymowkiStr463
             // 
             // open
             // 
+            this.open.Enabled = false;
             this.open.Location = new System.Drawing.Point(175, 140);
             this.open.Name = "open";
             this.open.Size = new System.Drawing.Size(75, 23);
@@ -163,6 +165,7 @@ namespace WymowkiStr463
             // 
             // randBtn
             // 
+            this.randBtn.Enabled = false;
             this.randBtn.Location = new System.Drawing.Point(257, 140);
             this.randBtn.Name = "randBtn";
             this.randBtn.Size = new System.Drawing.Size(126, 23);

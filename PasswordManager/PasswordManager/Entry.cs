@@ -15,6 +15,9 @@ namespace PasswordManager
         public string Login { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
+        public static string fileName = "dane.json";
+        public static string pth = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"\Data", fileName);
+
         public override string ToString() => Name;
         public Entry(string login,string password,string name)
         {
@@ -47,7 +50,6 @@ namespace PasswordManager
             Entry newEntry = new Entry(login, password, name);
             newEntry.Serialize(newEntry);
             string fileName = "dane.json";
-            string pth = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,@"\Data", fileName);
             if (!File.Exists(pth))
             {
                 using (System.IO.StreamWriter sw = File.CreateText(pth))
@@ -65,7 +67,6 @@ namespace PasswordManager
         }
         public static List<Entry> readFile()
         {
-            string fileName = "dane.json";
             string pth = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"\Data", fileName);
             string fileDataRead = File.ReadAllText(pth);
             var objEntry = JsonConvert.DeserializeObject<List<Entry>>(fileDataRead);

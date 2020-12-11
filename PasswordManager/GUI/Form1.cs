@@ -57,5 +57,10 @@ namespace GUI
                 button1.Visible = true;
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
