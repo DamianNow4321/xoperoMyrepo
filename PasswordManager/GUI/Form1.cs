@@ -15,23 +15,69 @@ namespace GUI
 {
     public partial class Form1 : Form
     {
-        List<Entry> objEntry = Entry.readFile();
+        bool firstTime = true;
+        List<Entry> objEntry;
         public Form1()
         {
             InitializeComponent();
             listBox1.DataSource = objEntry;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Entry.SaveToFile(textBox2.Text,textBox3.Text,textBox1.Text);
+            List<Entry> objEntry = Entry.readFile();
+            listBox1.DataSource = objEntry;
         }
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            richTextBox1.Text ="Nazwa: "+objEntry[listBox1.SelectedIndex].Name+Environment.NewLine+"Login: "+objEntry[listBox1.SelectedIndex].Login
-                + Environment.NewLine + "Hasło: " + objEntry[listBox1.SelectedIndex].Password;
+            if (Entry.pth != null)
+            {
+                richTextBox1.Text = "Nazwa: " + objEntry[listBox1.SelectedIndex].Name + Environment.NewLine + "Login: " + objEntry[listBox1.SelectedIndex].Login
+                    + Environment.NewLine + "Hasło: " + objEntry[listBox1.SelectedIndex].Password;
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            objEntry=Entry.searchPasswords(textBox4.Text);
+            listBox1.DataSource = objEntry;
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (Entry.pth != null)
+            {
+                string MPassC = Entry.loadMasterPassword();
+                string mpass = Entry.Hash(textBox5.Text);
+                if (MPassC == "")
+                {
+                    firstTime = true;
+                }
+                if (mpass == MPassC || firstTime == true)
+                {
+                    textBox4.Visible = true;
+                    listBox1.Visible = true;
+                    richTextBox1.Visible = true;
+                    button2.Visible = true;
+                    textBox1.Visible = true;
+                    textBox2.Visible = true;
+                    textBox3.Visible = true;
+                    button1.Visible = true;
+                }
+            }
+            else
+                MessageBox.Show("Proszę wybrać najpierw folder z hasłami","Ścieżka");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1.SelectedPath = Entry.pth;
+            DialogResult result = folderBrowserDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Entry.changePath(folderBrowserDialog1.SelectedPath);
+                objEntry = Entry.readFile();
+                listBox1.DataSource = objEntry;
+            }
         }
     }
 }
