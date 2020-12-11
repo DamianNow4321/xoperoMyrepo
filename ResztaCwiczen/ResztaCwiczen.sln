@@ -81,6 +81,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HexDumper", "HexDumper\HexD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdytorTekstu", "EdytorTekstu\EdytorTekstu.csproj", "{1CB45A68-03F2-40FD-8280-F47DF5637FC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RybyWPFstr530", "RybyWPFstr530\RybyWPFstr530.csproj", "{9B1804B7-A73B-4ED8-B429-32AA77072C23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -243,6 +245,10 @@ Global
 		{1CB45A68-03F2-40FD-8280-F47DF5637FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CB45A68-03F2-40FD-8280-F47DF5637FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CB45A68-03F2-40FD-8280-F47DF5637FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B1804B7-A73B-4ED8-B429-32AA77072C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B1804B7-A73B-4ED8-B429-32AA77072C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B1804B7-A73B-4ED8-B429-32AA77072C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B1804B7-A73B-4ED8-B429-32AA77072C23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
