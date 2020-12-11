@@ -15,8 +15,7 @@ namespace PasswordManager
         public string Login { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
-        public static string fileName = "dane.json";
-        public static string pth = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"\Data", fileName);
+        public static string pth;
 
         public override string ToString() => Name;
         public Entry(string login,string password,string name)
@@ -24,6 +23,25 @@ namespace PasswordManager
             Login = login;
             Password = password;
             Name = name;
+        }
+        public static string changePath(string NewPth)
+        {
+            pth = NewPth;
+            if (!File.Exists(Path.Combine(pth,"dane.json")))
+            {
+                using (System.IO.StreamWriter sw = File.CreateText(Path.Combine(pth, "mpass.json")))
+                {
+
+                }
+            }
+            if (!File.Exists(Path.Combine(pth, "mpass.json")))
+            {
+                using (System.IO.StreamWriter sw = File.CreateText(Path.Combine(pth, "mpass.json")))
+                {
+
+                }
+            }
+            return pth;
         }
         public string Serialize(Entry objEntry)
         {
@@ -50,45 +68,47 @@ namespace PasswordManager
             Entry newEntry = new Entry(login, password, name);
             newEntry.Serialize(newEntry);
             string fileName = "dane.json";
-            if (!File.Exists(pth))
+            string pthFile = Path.Combine(pth, fileName);
+            if (!File.Exists(pthFile))
             {
-                using (System.IO.StreamWriter sw = File.CreateText(pth))
+                using (System.IO.StreamWriter sw = File.CreateText(pthFile))
                 {
 
                 }
             }
-            var json = System.IO.File.ReadAllText(pth);
+            var json = System.IO.File.ReadAllText(pthFile);
             var fileData = JsonConvert.DeserializeObject<List<Entry>>(json)
                 ?? new List<Entry>();
             fileData.Add(newEntry);
             json = JsonConvert.SerializeObject(fileData);
-            System.IO.File.WriteAllText(pth, json);
+            System.IO.File.WriteAllText(pthFile, json);
             return true;
         }
         public static List<Entry> readFile()
         {
-            string pth = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"\Data", fileName);
-            string fileDataRead = File.ReadAllText(pth);
+            string fileName = "dane.json";
+            string pthFile = Path.Combine(pth, fileName);
+            string fileDataRead = File.ReadAllText(pthFile);
             var objEntry = JsonConvert.DeserializeObject<List<Entry>>(fileDataRead);
             return objEntry;
         }
         public static void changeMasterPassword(string MpassC)
         {
             string fileName = "mpass.json";
-            string pth = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"\Data", fileName);
-            if (!File.Exists(pth))
+            string pthPass = Path.Combine(pth, fileName);
+            if (!File.Exists(pthPass))
             {
                 using (System.IO.StreamWriter sw = File.CreateText(pth))
                 {
                 }
             }
-            System.IO.File.WriteAllText(pth, Hash(MpassC));
+            System.IO.File.WriteAllText(pthPass, Hash(MpassC));
         }
         public static string loadMasterPassword()
         {
             string fileName = "mpass.json";
-            string pth = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"\Data", fileName);
-            string fileDataRead = File.ReadAllText(pth);
+            string pthPass = Path.Combine(pth, fileName);
+            string fileDataRead = File.ReadAllText(pthPass);
             return fileDataRead;
         }
         public static List<Entry> searchPasswords(string sName)

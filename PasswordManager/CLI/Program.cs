@@ -13,8 +13,14 @@ namespace CLI
             string login;
             string password;
             string Mpassword;
+            string pathLoc;
             bool cont = true;
             string mpass;
+            if (Entry.pth == null)
+            {
+                Console.WriteLine("Proszę podać ścieżkę pliku");
+                Entry.changePath(Console.ReadLine());
+            }
             string MPassC=Entry.loadMasterPassword();
             Console.WriteLine("Proszę wpisać hasło");
             mpass = Entry.Hash(Console.ReadLine());
@@ -28,7 +34,7 @@ namespace CLI
                 while (cont == true)
                 {
                     List<Entry> objEntry = Entry.readFile();
-                    Console.WriteLine("Jeśli chcesz wyświetlić zapisane hasła wpisz /check.Jeśli chcesz wyszukać hasło wpisz /search.Jeśli chcesz zmianić hasło dostępu wpisz /change. Jeśli chcesz dodać hasło wpisz /add. Jeśli chcesz zamkąć program wpisz /exit");
+                    Console.WriteLine("Jeśli chcesz wyświetlić zapisane hasła wpisz /check.Jeśli chcesz wyszukać hasło wpisz /search.Jeśli chcesz zmianić hasło dostępu wpisz /change.Jeśli chcesz zmienić folder z hasłami wpisz /folder. Jeśli chcesz dodać hasło wpisz /add. Jeśli chcesz zamkąć program wpisz /exit");
                     switch (Console.ReadLine())
                     {
                         case "/add":
@@ -46,6 +52,11 @@ namespace CLI
                             Mpassword = MPassC;
                             Entry.changeMasterPassword(MPassC);
                             break;
+                        case "/folder":
+                            Console.WriteLine($"Wpisz ścieżke");
+                            pathLoc = Console.ReadLine();
+                            Entry.changePath(pathLoc);
+                            break;
                         case "/search":
                             Console.WriteLine($"Wpisz nazwę");
                             string searchName = Console.ReadLine();
@@ -57,10 +68,17 @@ namespace CLI
                             }
                             break;
                         case "/check":
-                            for (int i = 0; i <= objEntry.Count - 1; i++)
+                            if (objEntry !=null)
                             {
-                                Console.WriteLine("Nazwa: " + objEntry[i].Name + Environment.NewLine + "Login: " + objEntry[i].Login
-                                + Environment.NewLine + "Hasło: " + objEntry[i].Password);
+                                for (int i = 0; i <= objEntry.Count - 1; i++)
+                                {
+                                    Console.WriteLine("Nazwa: " + objEntry[i].Name + Environment.NewLine + "Login: " + objEntry[i].Login
+                                    + Environment.NewLine + "Hasło: " + objEntry[i].Password);
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("Brak zapisanych haseł");
                             }
                             break;
                         case "/exit":
