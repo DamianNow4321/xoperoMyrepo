@@ -12,11 +12,18 @@ namespace PasswordManagerTests
         [TestMethod]
         public void LoadPasswordAndFiles()
         {
+            Entry.pth = "C:/Data";
             string pass = Entry.loadMasterPassword();
             List<Entry> objEntry = Entry.readFile();
             for (int i = 0; i <= objEntry.Count - 1; i++)
             {
             }
+        }
+        [TestMethod]
+        public void AddEntry()
+        {
+            Entry.pth = "C:/Data";
+            Entry.SaveToFile("TEST", "TEST", "TEST");
         }
     }
 }
