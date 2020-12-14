@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdytorTekstu", "EdytorTekst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RybyWPFstr530", "RybyWPFstr530\RybyWPFstr530.csproj", "{9B1804B7-A73B-4ED8-B429-32AA77072C23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WyprawaStr496", "Wyprawa\WyprawaStr496.csproj", "{7D19DB6E-827B-4B7A-A70B-264EF3D6178E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -249,6 +251,10 @@ Global
 		{9B1804B7-A73B-4ED8-B429-32AA77072C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B1804B7-A73B-4ED8-B429-32AA77072C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B1804B7-A73B-4ED8-B429-32AA77072C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D19DB6E-827B-4B7A-A70B-264EF3D6178E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D19DB6E-827B-4B7A-A70B-264EF3D6178E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D19DB6E-827B-4B7A-A70B-264EF3D6178E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D19DB6E-827B-4B7A-A70B-264EF3D6178E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
