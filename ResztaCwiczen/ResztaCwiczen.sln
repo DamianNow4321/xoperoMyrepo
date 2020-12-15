@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RybyWPFstr530", "RybyWPFstr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WyprawaStr496", "Wyprawa\WyprawaStr496.csproj", "{7D19DB6E-827B-4B7A-A70B-264EF3D6178E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SniadanieDlaDrawaliWPFStr538", "SniadanieDlaDrawaliWPFStr538\SniadanieDlaDrawaliWPFStr538.csproj", "{4BB9CC90-A932-4E1D-83A1-136EDC02D6B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -255,6 +257,10 @@ Global
 		{7D19DB6E-827B-4B7A-A70B-264EF3D6178E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D19DB6E-827B-4B7A-A70B-264EF3D6178E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D19DB6E-827B-4B7A-A70B-264EF3D6178E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB9CC90-A932-4E1D-83A1-136EDC02D6B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB9CC90-A932-4E1D-83A1-136EDC02D6B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB9CC90-A932-4E1D-83A1-136EDC02D6B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB9CC90-A932-4E1D-83A1-136EDC02D6B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
