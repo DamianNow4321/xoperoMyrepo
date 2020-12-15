@@ -20,7 +20,8 @@ namespace PasswordManagerTests
                 {
                 System.Console.WriteLine("Nazwa: " + objEntry[i].Name + Environment.NewLine + "Login: " + objEntry[i].Login
                                    + Environment.NewLine + "Has³o: " + objEntry[i].Password);
-            }
+                }
+
         }
         [TestMethod]
         public void AddEntry()

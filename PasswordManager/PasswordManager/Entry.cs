@@ -16,7 +16,7 @@ namespace PasswordManager
         public string Password { get; set; }
         public string Name { get; set; }
         public static string pth;
-
+        public static string salt;
         public override string ToString() => Name;
         public Entry(string login,string password,string name)
         {
