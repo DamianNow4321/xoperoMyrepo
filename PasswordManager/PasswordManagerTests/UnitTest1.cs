@@ -44,5 +44,9 @@ namespace PasswordManagerTests
         {
                 Entry.searchPasswords("TEST");
         }
+        public void Hash()
+        {
+            Entry.Hash("TEST");
+        }
     }
 }
