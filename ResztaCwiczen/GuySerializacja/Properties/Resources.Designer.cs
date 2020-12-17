@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace ProstyEdytorTekstuWPFStr572.Properties
+namespace GuySerializacja.Properties
 {
     /// <summary>
     ///   Silnie typizowana klasa zasobów do wyszukiwania zlokalizowanych ciągów itd.
@@ -43,7 +43,7 @@ namespace ProstyEdytorTekstuWPFStr572.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProstyEdytorTekstuWPFStr572.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GuySerializacja.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

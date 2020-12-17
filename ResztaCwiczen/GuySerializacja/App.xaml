@@ -1,7 +1,7 @@
-﻿<Application x:Class="ProstyEdytorTekstuWPFStr572.App"
+﻿<Application x:Class="GuySerializacja.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:ProstyEdytorTekstuWPFStr572"
+             xmlns:local="clr-namespace:GuySerializacja"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
