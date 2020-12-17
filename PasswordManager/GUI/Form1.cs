@@ -24,7 +24,7 @@ namespace GUI
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Entry.SaveToFile(textBox2.Text,textBox3.Text,textBox1.Text);
+            Entry.SaveToFile(textBox1.Text,textBox2.Text,textBox3.Text);
             List<Entry> objEntry = Entry.readFile();
             listBox1.DataSource = objEntry;
         }
@@ -32,6 +32,7 @@ namespace GUI
         {
             if (Entry.pth != null)
             {
+                objEntry = Entry.readFile();
                 richTextBox1.Text = "Nazwa: " + objEntry[listBox1.SelectedIndex].Name + Environment.NewLine + "Login: " + objEntry[listBox1.SelectedIndex].Login
                     + Environment.NewLine + "Hasło: " + objEntry[listBox1.SelectedIndex].Password;
             }
@@ -47,7 +48,7 @@ namespace GUI
             if (Entry.pth != null)
             {
                 string MPassC = Entry.loadMasterPassword();
-                string mpass = Entry.Hash(textBox5.Text);
+                string mpass = Entry.Hash(textBox5.Text).ToString();
                 if (MPassC == "")
                 {
                     firstTime = true;

@@ -16,7 +16,6 @@ namespace PasswordManager
         public string Password { get; set; }
         public string Name { get; set; }
         public static string pth;
-        public static string salt;
         public override string ToString() => Name;
         public Entry(string login,string password,string name)
         {
@@ -53,15 +52,21 @@ namespace PasswordManager
             Entry objEntry = JsonConvert.DeserializeObject<Entry>(Json);
             return objEntry;
         }
-        public static string Hash(string password)
+        public static byte[] Hash(string password)
         {
-            var bytes = new UTF8Encoding().GetBytes(password);
-            byte[] hashBytes;
-            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            byte[] passwordByte = Encoding.ASCII.GetBytes(password);
+            byte[] salt = Encoding.ASCII.GetBytes(loadMasterPassword());
+            HashAlgorithm algorithm = new SHA256Managed();
+            byte[] plainTextWithSaltBytes = new byte[passwordByte.Length + salt.Length];
+            for (int i = 0; i < passwordByte.Length; i++)
             {
-                hashBytes = algorithm.ComputeHash(bytes);
+                plainTextWithSaltBytes[i] = passwordByte[i];
             }
-            return Convert.ToBase64String(hashBytes);
+            for (int i = 0; i < salt.Length; i++)
+            {
+                plainTextWithSaltBytes[passwordByte.Length + i] = salt[i];
+            }
+            return algorithm.ComputeHash(plainTextWithSaltBytes);
         }
         public static bool SaveToFile(string name,string login,string password)
         {
@@ -102,7 +107,7 @@ namespace PasswordManager
                 {
                 }
             }
-            System.IO.File.WriteAllText(pthPass, Hash(MpassC));
+            System.IO.File.WriteAllText(pthPass, Hash(MpassC).ToString());
         }
         public static string loadMasterPassword()
         {
