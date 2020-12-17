@@ -42,7 +42,7 @@
             <Button x:Name="ReadNewGuy" Content="Wczytaj obiekt Guy" HorizontalAlignment="Left" Click="ReadNewGuy_Click" />
             <StackPanel>
                 <TextBlock Text="Nowy facet:"/>
-                <TextBlock TextWrapping="Wrap" Text="{Binding NewGuy}"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding NewGuy}" Height="45"/>
             </StackPanel>
         </StackPanel>
     </Grid>
