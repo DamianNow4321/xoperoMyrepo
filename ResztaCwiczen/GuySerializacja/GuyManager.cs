@@ -36,7 +36,6 @@ namespace GuySerializacja
             using (Stream inputStream = File.OpenRead(GuyFile))
             {
                 DataContractSerializer serializer = new DataContractSerializer(typeof(Guy));
-                NewGuy = serializer.ReadObject(inputStream) as Guy;
             }
             OnPropertyChanged("NewGuy");
         }
@@ -48,7 +47,6 @@ namespace GuySerializacja
             using (Stream outputStream = File.OpenWrite(GuyFile))
             {
                 DataContractSerializer serializer = new DataContractSerializer(typeof(Guy));
-                serializer.WriteObject(outputStream, guyToWrite);
             }
             OnPropertyChanged("GuyFile");
         }
