@@ -34,7 +34,7 @@ namespace GUI
             {
                 objEntry = Entry.readFile();
                 richTextBox1.Text = "Nazwa: " + objEntry[listBox1.SelectedIndex].Name + Environment.NewLine + "Login: " + objEntry[listBox1.SelectedIndex].Login
-                    + Environment.NewLine + "Hasło: " + objEntry[listBox1.SelectedIndex].Password;
+                + Environment.NewLine + "Hasło: " + objEntry[listBox1.SelectedIndex].Password;
             }
         }
         private void button2_Click(object sender, EventArgs e)
