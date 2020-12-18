@@ -30,6 +30,7 @@ namespace GUI
         private void InitializeComponent()
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -46,7 +47,8 @@ namespace GUI
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.button4 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -54,6 +56,8 @@ namespace GUI
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button5);
+            this.tabPage2.Controls.Add(this.textBox6);
             this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.textBox3);
@@ -70,11 +74,21 @@ namespace GUI
             this.tabPage2.Text = "Dodaj konto";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(129, 19);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(141, 23);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Wybierz folder z plikami";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 122);
+            this.button1.Location = new System.Drawing.Point(10, 122);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 6;
             this.button1.Text = "Dodaj";
             this.button1.UseVisualStyleBackColor = true;
@@ -213,15 +227,22 @@ namespace GUI
             this.tabControl1.Size = new System.Drawing.Size(304, 350);
             this.tabControl1.TabIndex = 0;
             // 
-            // button4
+            // textBox6
             // 
-            this.button4.Location = new System.Drawing.Point(129, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Wybierz folder z plikami";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.textBox6.Location = new System.Drawing.Point(10, 151);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 8;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(10, 177);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 23);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Zmień salt";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
@@ -260,6 +281,8 @@ namespace GUI
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
 

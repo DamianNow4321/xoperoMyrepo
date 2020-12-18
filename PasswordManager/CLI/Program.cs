@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using Newtonsoft;
+using System.Text;
+
 namespace CLI
 {
     class Program
@@ -23,7 +25,7 @@ namespace CLI
             }
             string MPassC=Entry.loadMasterPassword();
             Console.WriteLine("Proszę wpisać hasło");
-            mpass = Entry.Hash(Console.ReadLine());
+            mpass = Entry.Hash(Console.ReadLine()).ToString();
             bool firstTime=true;
             if (MPassC == "")
             {
@@ -34,7 +36,10 @@ namespace CLI
                 while (cont == true)
                 {
                     List<Entry> objEntry = Entry.readFile();
-                    Console.WriteLine("Jeśli chcesz wyświetlić zapisane hasła wpisz /check.Jeśli chcesz wyszukać hasło wpisz /search.Jeśli chcesz zmianić hasło dostępu wpisz /change.Jeśli chcesz zmienić folder z hasłami wpisz /folder. Jeśli chcesz dodać hasło wpisz /add. Jeśli chcesz zamkąć program wpisz /exit");
+                    Console.WriteLine("Jeśli chcesz wyświetlić zapisane hasła wpisz /check.Jeśli chcesz wyszukać hasło wpisz /search." +
+                        "Jeśli chcesz zmianić hasło dostępu wpisz /change.Jeśli chcesz zmienić folder z hasłami wpisz /folder. " +
+                        "Jeśli chcesz dodać hasło wpisz /add. Jeśli chcesz zmienić salt do hashowania wpisz /changeSalt " +
+                        "Jeśli chcesz zamkąć program wpisz /exit");
                     switch (Console.ReadLine())
                     {
                         case "/add":
@@ -45,6 +50,10 @@ namespace CLI
                             Console.WriteLine($"Wpisz hasło");
                             password = Console.ReadLine();
                             Entry.SaveToFile(name, login, password);
+                            break;
+                        case "/changeSalt":
+                            Console.WriteLine($"Wpisz salt");
+                            Entry.changeSalt(Console.ReadLine());
                             break;
                         case "/change":
                             Console.WriteLine($"Wpisz hasło dostępu");

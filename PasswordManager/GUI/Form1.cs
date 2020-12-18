@@ -80,5 +80,10 @@ namespace GUI
                 listBox1.DataSource = objEntry;
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Entry.changeSalt(textBox6.Text);
+        }
     }
 }
