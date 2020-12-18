@@ -30,6 +30,8 @@ namespace GUI
         private void InitializeComponent()
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -47,8 +49,8 @@ namespace GUI
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -56,6 +58,8 @@ namespace GUI
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button6);
+            this.tabPage2.Controls.Add(this.textBox7);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.textBox6);
             this.tabPage2.Controls.Add(this.button4);
@@ -73,6 +77,25 @@ namespace GUI
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Dodaj konto";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(10, 177);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(103, 23);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Zmień salt";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(10, 151);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 8;
+            this.textBox6.Visible = false;
             // 
             // button4
             // 
@@ -164,14 +187,14 @@ namespace GUI
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(133, 17);
+            this.textBox5.Location = new System.Drawing.Point(128, 17);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(149, 20);
+            this.textBox5.Size = new System.Drawing.Size(154, 20);
             this.textBox5.TabIndex = 5;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(4, 17);
+            this.button3.Location = new System.Drawing.Point(0, 17);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 23);
             this.button3.TabIndex = 4;
@@ -227,22 +250,24 @@ namespace GUI
             this.tabControl1.Size = new System.Drawing.Size(304, 350);
             this.tabControl1.TabIndex = 0;
             // 
-            // textBox6
+            // textBox7
             // 
-            this.textBox6.Location = new System.Drawing.Point(10, 151);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 8;
+            this.textBox7.Location = new System.Drawing.Point(13, 206);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 10;
+            this.textBox7.Visible = false;
             // 
-            // button5
+            // button6
             // 
-            this.button5.Location = new System.Drawing.Point(10, 177);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 23);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Zmień salt";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button6.Location = new System.Drawing.Point(13, 234);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 23);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Zmień hasło dostępu";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
@@ -283,6 +308,8 @@ namespace GUI
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox7;
     }
 }
 

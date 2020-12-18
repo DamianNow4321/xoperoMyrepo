@@ -62,6 +62,9 @@ namespace GUI
                     textBox1.Visible = true;
                     textBox2.Visible = true;
                     textBox3.Visible = true;
+                    textBox7.Visible = true;
+                    textBox6.Visible = true;
+                    button5.Visible = true;
                     button1.Visible = true;
                 }
             }
@@ -84,6 +87,11 @@ namespace GUI
         private void button5_Click(object sender, EventArgs e)
         {
             Entry.changeSalt(textBox6.Text);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Entry.changeMasterPassword(textBox7.Text);
         }
     }
 }
