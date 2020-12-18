@@ -30,6 +30,8 @@ namespace GUI
         private void InitializeComponent()
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -48,12 +50,21 @@ namespace GUI
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.delBtn = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.passChange = new System.Windows.Forms.TextBox();
+            this.loginChange = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.nazwaChange = new System.Windows.Forms.TextBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -77,6 +88,25 @@ namespace GUI
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Dodaj konto";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(13, 234);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 23);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Zmień hasło dostępu";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(13, 206);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 10;
+            this.textBox7.Visible = false;
             // 
             // button5
             // 
@@ -244,30 +274,107 @@ namespace GUI
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(304, 350);
             this.tabControl1.TabIndex = 0;
             // 
-            // textBox7
+            // tabPage3
             // 
-            this.textBox7.Location = new System.Drawing.Point(13, 206);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 10;
-            this.textBox7.Visible = false;
+            this.tabPage3.Controls.Add(this.delBtn);
+            this.tabPage3.Controls.Add(this.button7);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.passChange);
+            this.tabPage3.Controls.Add(this.loginChange);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.nazwaChange);
+            this.tabPage3.Controls.Add(this.listBox2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(296, 324);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Zmiana danych";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // delBtn
             // 
-            this.button6.Location = new System.Drawing.Point(13, 234);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 23);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Zmień hasło dostępu";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Visible = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.delBtn.Location = new System.Drawing.Point(168, 187);
+            this.delBtn.Name = "delBtn";
+            this.delBtn.Size = new System.Drawing.Size(97, 23);
+            this.delBtn.TabIndex = 8;
+            this.delBtn.Text = "Usuń";
+            this.delBtn.UseVisualStyleBackColor = true;
+            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(165, 157);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(100, 23);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Modyfikuj";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(165, 111);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Hasło";
+            // 
+            // passChange
+            // 
+            this.passChange.Location = new System.Drawing.Point(165, 130);
+            this.passChange.Name = "passChange";
+            this.passChange.Size = new System.Drawing.Size(100, 20);
+            this.passChange.TabIndex = 5;
+            // 
+            // loginChange
+            // 
+            this.loginChange.Location = new System.Drawing.Point(165, 91);
+            this.loginChange.Name = "loginChange";
+            this.loginChange.Size = new System.Drawing.Size(100, 20);
+            this.loginChange.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(162, 75);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Login";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(162, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Nazwa";
+            // 
+            // nazwaChange
+            // 
+            this.nazwaChange.Location = new System.Drawing.Point(165, 47);
+            this.nazwaChange.Name = "nazwaChange";
+            this.nazwaChange.Size = new System.Drawing.Size(100, 20);
+            this.nazwaChange.TabIndex = 1;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(19, 25);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(120, 277);
+            this.listBox2.TabIndex = 0;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -282,6 +389,8 @@ namespace GUI
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -310,6 +419,16 @@ namespace GUI
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button delBtn;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox passChange;
+        private System.Windows.Forms.TextBox loginChange;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox nazwaChange;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
 

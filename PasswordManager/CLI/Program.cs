@@ -14,7 +14,6 @@ namespace CLI
             string name;
             string login;
             string password;
-            string Mpassword;
             string pathLoc;
             bool cont = true;
             string mpass;
@@ -57,9 +56,7 @@ namespace CLI
                             break;
                         case "/change":
                             Console.WriteLine($"Wpisz hasło dostępu");
-                            Mpassword = Console.ReadLine();
-                            Mpassword = MPassC;
-                            Entry.changeMasterPassword(MPassC);
+                            Entry.changeMasterPassword(Console.ReadLine());
                             break;
                         case "/folder":
                             Console.WriteLine($"Wpisz ścieżke");

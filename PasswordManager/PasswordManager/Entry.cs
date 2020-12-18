@@ -122,6 +122,7 @@ namespace PasswordManager
             }
             System.IO.File.WriteAllText(pthPass, salt);
         }
+
         public static string loadMasterPassword()
         {
             string fileName = "mpass.json";
@@ -141,5 +142,46 @@ namespace PasswordManager
             }
             return file;
         }
+        public static bool removeEntry(int index)
+        {
+            string fileName = "dane.json";
+            string pthFile = Path.Combine(pth, fileName);
+            if (!File.Exists(pthFile))
+            {
+                using (System.IO.StreamWriter sw = File.CreateText(pthFile))
+                {
+
+                }
+            }
+            var json = System.IO.File.ReadAllText(pthFile);
+            var fileData = JsonConvert.DeserializeObject<List<Entry>>(json)
+                ?? new List<Entry>();
+            fileData.Remove(fileData[index]);
+            json = JsonConvert.SerializeObject(fileData);
+            System.IO.File.WriteAllText(pthFile, json);
+            return true;
+        }
+
+    /*    public static bool changeEntry(string name, string login, string password)
+        {
+            Entry newEntry = new Entry(login, password, name);
+            newEntry.Serialize(newEntry);
+            string fileName = "dane.json";
+            string pthFile = Path.Combine(pth, fileName);
+            if (!File.Exists(pthFile))
+            {
+                using (System.IO.StreamWriter sw = File.CreateText(pthFile))
+                {
+
+                }
+            }
+            var json = System.IO.File.ReadAllText(pthFile);
+            var fileData = JsonConvert.DeserializeObject<List<Entry>>(json)
+                ?? new List<Entry>();
+            fileData.Where<Name == "xy");>;
+            json = JsonConvert.SerializeObject(fileData);
+            System.IO.File.WriteAllText(pthFile, json);
+            return true;
+        }*/
     }
 }

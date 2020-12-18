@@ -21,6 +21,7 @@ namespace GUI
         {
             InitializeComponent();
             listBox1.DataSource = objEntry;
+            listBox2.DataSource = objEntry;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -81,6 +82,7 @@ namespace GUI
                 Entry.changePath(folderBrowserDialog1.SelectedPath);
                 objEntry = Entry.readFile();
                 listBox1.DataSource = objEntry;
+                listBox2.DataSource = objEntry;
             }
         }
 
@@ -92,6 +94,25 @@ namespace GUI
         private void button6_Click(object sender, EventArgs e)
         {
             Entry.changeMasterPassword(textBox7.Text);
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Entry.pth != null)
+            {
+                objEntry = Entry.readFile();
+                nazwaChange.Text = objEntry[listBox2.SelectedIndex].Name;
+                loginChange.Text = objEntry[listBox2.SelectedIndex].Login;
+                passChange.Text = objEntry[listBox2.SelectedIndex].Password;
+            }
+        }
+
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+            Entry.removeEntry(listBox2.SelectedIndex);
+            objEntry = Entry.readFile();
+            listBox1.DataSource = objEntry;
+            listBox2.DataSource = objEntry;
         }
     }
 }
