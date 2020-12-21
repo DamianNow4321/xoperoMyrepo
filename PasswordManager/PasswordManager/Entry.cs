@@ -162,10 +162,8 @@ namespace PasswordManager
             return true;
         }
 
-    /*    public static bool changeEntry(string name, string login, string password)
+       public static bool changeEntry(string name, string login, string password,int index)
         {
-            Entry newEntry = new Entry(login, password, name);
-            newEntry.Serialize(newEntry);
             string fileName = "dane.json";
             string pthFile = Path.Combine(pth, fileName);
             if (!File.Exists(pthFile))
@@ -178,10 +176,12 @@ namespace PasswordManager
             var json = System.IO.File.ReadAllText(pthFile);
             var fileData = JsonConvert.DeserializeObject<List<Entry>>(json)
                 ?? new List<Entry>();
-            fileData.Where<Name == "xy");>;
+            fileData[index].Name = name;
+            fileData[index].Login = login;
+            fileData[index].Password = password;
             json = JsonConvert.SerializeObject(fileData);
             System.IO.File.WriteAllText(pthFile, json);
             return true;
-        }*/
+        }
     }
 }

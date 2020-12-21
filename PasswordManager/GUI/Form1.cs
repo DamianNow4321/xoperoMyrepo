@@ -114,5 +114,13 @@ namespace GUI
             listBox1.DataSource = objEntry;
             listBox2.DataSource = objEntry;
         }
+
+        private void changeBtn_Click(object sender, EventArgs e)
+        {
+            Entry.changeEntry(nazwaChange.Text, loginChange.Text, passChange.Text, listBox2.SelectedIndex);
+            objEntry = Entry.readFile();
+            listBox1.DataSource = objEntry;
+            listBox2.DataSource = objEntry;
+        }
     }
 }

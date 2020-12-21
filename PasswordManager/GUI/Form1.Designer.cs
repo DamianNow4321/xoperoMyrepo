@@ -52,7 +52,7 @@ namespace GUI
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.delBtn = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.changeBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.passChange = new System.Windows.Forms.TextBox();
             this.loginChange = new System.Windows.Forms.TextBox();
@@ -284,7 +284,7 @@ namespace GUI
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.delBtn);
-            this.tabPage3.Controls.Add(this.button7);
+            this.tabPage3.Controls.Add(this.changeBtn);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.passChange);
             this.tabPage3.Controls.Add(this.loginChange);
@@ -310,14 +310,15 @@ namespace GUI
             this.delBtn.UseVisualStyleBackColor = true;
             this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
             // 
-            // button7
+            // changeBtn
             // 
-            this.button7.Location = new System.Drawing.Point(165, 157);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 23);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Modyfikuj";
-            this.button7.UseVisualStyleBackColor = true;
+            this.changeBtn.Location = new System.Drawing.Point(165, 157);
+            this.changeBtn.Name = "changeBtn";
+            this.changeBtn.Size = new System.Drawing.Size(100, 23);
+            this.changeBtn.TabIndex = 7;
+            this.changeBtn.Text = "Modyfikuj";
+            this.changeBtn.UseVisualStyleBackColor = true;
+            this.changeBtn.Click += new System.EventHandler(this.changeBtn_Click);
             // 
             // label6
             // 
@@ -421,7 +422,7 @@ namespace GUI
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button delBtn;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button changeBtn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox passChange;
         private System.Windows.Forms.TextBox loginChange;
