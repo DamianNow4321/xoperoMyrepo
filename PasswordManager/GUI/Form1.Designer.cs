@@ -302,28 +302,30 @@ namespace GUI
             // 
             // delBtn
             // 
-            this.delBtn.Location = new System.Drawing.Point(168, 187);
+            this.delBtn.Location = new System.Drawing.Point(171, 180);
             this.delBtn.Name = "delBtn";
             this.delBtn.Size = new System.Drawing.Size(97, 23);
             this.delBtn.TabIndex = 8;
             this.delBtn.Text = "Usuń";
             this.delBtn.UseVisualStyleBackColor = true;
+            this.delBtn.Visible = false;
             this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
             // 
             // changeBtn
             // 
-            this.changeBtn.Location = new System.Drawing.Point(165, 157);
+            this.changeBtn.Location = new System.Drawing.Point(171, 151);
             this.changeBtn.Name = "changeBtn";
-            this.changeBtn.Size = new System.Drawing.Size(100, 23);
+            this.changeBtn.Size = new System.Drawing.Size(97, 23);
             this.changeBtn.TabIndex = 7;
             this.changeBtn.Text = "Modyfikuj";
             this.changeBtn.UseVisualStyleBackColor = true;
+            this.changeBtn.Visible = false;
             this.changeBtn.Click += new System.EventHandler(this.changeBtn_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(165, 111);
+            this.label6.Location = new System.Drawing.Point(162, 109);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 6;
@@ -331,14 +333,14 @@ namespace GUI
             // 
             // passChange
             // 
-            this.passChange.Location = new System.Drawing.Point(165, 130);
+            this.passChange.Location = new System.Drawing.Point(165, 125);
             this.passChange.Name = "passChange";
             this.passChange.Size = new System.Drawing.Size(100, 20);
             this.passChange.TabIndex = 5;
             // 
             // loginChange
             // 
-            this.loginChange.Location = new System.Drawing.Point(165, 91);
+            this.loginChange.Location = new System.Drawing.Point(165, 86);
             this.loginChange.Name = "loginChange";
             this.loginChange.Size = new System.Drawing.Size(100, 20);
             this.loginChange.TabIndex = 4;
@@ -346,7 +348,7 @@ namespace GUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(162, 75);
+            this.label5.Location = new System.Drawing.Point(162, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 3;

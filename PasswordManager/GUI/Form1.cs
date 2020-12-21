@@ -67,6 +67,8 @@ namespace GUI
                     textBox6.Visible = true;
                     button5.Visible = true;
                     button1.Visible = true;
+                    changeBtn.Visible = true;
+                    delBtn.Visible = true;
                 }
             }
             else
