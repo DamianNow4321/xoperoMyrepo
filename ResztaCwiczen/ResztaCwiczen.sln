@@ -101,6 +101,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnesyStr629", "MagnesyStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlonyRozdział13DisposeStr648", "KlonyRozdział13\KlonyRozdział13DisposeStr648.csproj", "{771D53F3-68E4-470C-8592-B46F8E37E4B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlonyStr651", "KlonyStr651\KlonyStr651.csproj", "{3AAE9CA0-BD0F-418F-9BDB-D34ACDF517E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -303,6 +305,10 @@ Global
 		{771D53F3-68E4-470C-8592-B46F8E37E4B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{771D53F3-68E4-470C-8592-B46F8E37E4B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{771D53F3-68E4-470C-8592-B46F8E37E4B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AAE9CA0-BD0F-418F-9BDB-D34ACDF517E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AAE9CA0-BD0F-418F-9BDB-D34ACDF517E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AAE9CA0-BD0F-418F-9BDB-D34ACDF517E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AAE9CA0-BD0F-418F-9BDB-D34ACDF517E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
