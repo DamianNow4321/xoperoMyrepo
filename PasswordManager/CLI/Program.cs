@@ -37,8 +37,9 @@ namespace CLI
                     List<Entry> objEntry = Entry.readFile();
                     Console.WriteLine("Jeśli chcesz wyświetlić zapisane hasła wpisz /check.Jeśli chcesz wyszukać hasło wpisz /search." +
                         "Jeśli chcesz zmianić hasło dostępu wpisz /change.Jeśli chcesz zmienić folder z hasłami wpisz /folder. " +
-                        "Jeśli chcesz dodać hasło wpisz /add. Jeśli chcesz zmienić salt do hashowania wpisz /changeSalt " +
-                        "Jeśli chcesz zamkąć program wpisz /exit");
+                        "Jeśli chcesz dodać wpis wpisz /add. Jeśli chcesz zmienić salt do hashowania wpisz /changeSalt " +
+                        "Jeśli chcesz zmodyfikować wpis wpisz /modifyentry.Jeśli chcesz usunąć wpis wpisz /removeentry." +
+                        "Jeśli chcesz zamkąć program wpisz /exit.");
                     switch (Console.ReadLine())
                     {
                         case "/add":
@@ -62,6 +63,21 @@ namespace CLI
                             Console.WriteLine($"Wpisz ścieżke");
                             pathLoc = Console.ReadLine();
                             Entry.changePath(pathLoc);
+                            break;
+                        case "/modifyentry":
+                            Console.WriteLine($"Wpisz numer wpisu do modyfikacji");
+                            int index = int.Parse(Console.ReadLine());
+                            Console.WriteLine($"Wpisz nazwę serwisu");
+                            name = Console.ReadLine();
+                            Console.WriteLine($"Wpisz login");
+                            login = Console.ReadLine();
+                            Console.WriteLine($"Wpisz hasło");
+                            password = Console.ReadLine();
+                            Entry.changeEntry(name, login, password, index);
+                            break;
+                        case "/removeentry":
+                            Console.WriteLine($"Wpisz numer wpisu do modyfikacji");
+                            Entry.removeEntry(int.Parse(Console.ReadLine()));
                             break;
                         case "/search":
                             Console.WriteLine($"Wpisz nazwę");
