@@ -69,6 +69,9 @@ namespace GUI
                     button1.Visible = true;
                     changeBtn.Visible = true;
                     delBtn.Visible = true;
+                    nazwaChange.Visible = true;
+                    loginChange.Visible = true;
+                    passChange.Visible = true;
                 }
             }
             else

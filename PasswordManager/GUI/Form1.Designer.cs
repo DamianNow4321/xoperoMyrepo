@@ -337,6 +337,7 @@ namespace GUI
             this.passChange.Name = "passChange";
             this.passChange.Size = new System.Drawing.Size(100, 20);
             this.passChange.TabIndex = 5;
+            this.passChange.Visible = false;
             // 
             // loginChange
             // 
