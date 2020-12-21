@@ -21,10 +21,11 @@ namespace GUI
         {
             InitializeComponent();
             listBox1.DataSource = objEntry;
+            listBox2.DataSource = objEntry;
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Entry.SaveToFile(textBox2.Text,textBox3.Text,textBox1.Text);
+            Entry.SaveToFile(textBox1.Text,textBox2.Text,textBox3.Text);
             List<Entry> objEntry = Entry.readFile();
             listBox1.DataSource = objEntry;
         }
@@ -32,8 +33,9 @@ namespace GUI
         {
             if (Entry.pth != null)
             {
+                objEntry = Entry.readFile();
                 richTextBox1.Text = "Nazwa: " + objEntry[listBox1.SelectedIndex].Name + Environment.NewLine + "Login: " + objEntry[listBox1.SelectedIndex].Login
-                    + Environment.NewLine + "Hasło: " + objEntry[listBox1.SelectedIndex].Password;
+                + Environment.NewLine + "Hasło: " + objEntry[listBox1.SelectedIndex].Password;
             }
         }
         private void button2_Click(object sender, EventArgs e)
@@ -47,7 +49,7 @@ namespace GUI
             if (Entry.pth != null)
             {
                 string MPassC = Entry.loadMasterPassword();
-                string mpass = Entry.Hash(textBox5.Text);
+                string mpass = Entry.Hash(textBox5.Text).ToString();
                 if (MPassC == "")
                 {
                     firstTime = true;
@@ -61,7 +63,12 @@ namespace GUI
                     textBox1.Visible = true;
                     textBox2.Visible = true;
                     textBox3.Visible = true;
+                    textBox7.Visible = true;
+                    textBox6.Visible = true;
+                    button5.Visible = true;
                     button1.Visible = true;
+                    changeBtn.Visible = true;
+                    delBtn.Visible = true;
                 }
             }
             else
@@ -77,7 +84,45 @@ namespace GUI
                 Entry.changePath(folderBrowserDialog1.SelectedPath);
                 objEntry = Entry.readFile();
                 listBox1.DataSource = objEntry;
+                listBox2.DataSource = objEntry;
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Entry.changeSalt(textBox6.Text);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Entry.changeMasterPassword(textBox7.Text);
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Entry.pth != null)
+            {
+                objEntry = Entry.readFile();
+                nazwaChange.Text = objEntry[listBox2.SelectedIndex].Name;
+                loginChange.Text = objEntry[listBox2.SelectedIndex].Login;
+                passChange.Text = objEntry[listBox2.SelectedIndex].Password;
+            }
+        }
+
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+            Entry.removeEntry(listBox2.SelectedIndex);
+            objEntry = Entry.readFile();
+            listBox1.DataSource = objEntry;
+            listBox2.DataSource = objEntry;
+        }
+
+        private void changeBtn_Click(object sender, EventArgs e)
+        {
+            Entry.changeEntry(nazwaChange.Text, loginChange.Text, passChange.Text, listBox2.SelectedIndex);
+            objEntry = Entry.readFile();
+            listBox1.DataSource = objEntry;
+            listBox2.DataSource = objEntry;
         }
     }
 }

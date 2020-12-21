@@ -16,8 +16,8 @@ namespace PasswordManager
         public string Password { get; set; }
         public string Name { get; set; }
         public static string pth;
-
         public override string ToString() => Name;
+        public static string salt="default";
         public Entry(string login,string password,string name)
         {
             Login = login;
@@ -53,15 +53,21 @@ namespace PasswordManager
             Entry objEntry = JsonConvert.DeserializeObject<Entry>(Json);
             return objEntry;
         }
-        public static string Hash(string password)
+        public static byte[] Hash(string password)
         {
-            var bytes = new UTF8Encoding().GetBytes(password);
-            byte[] hashBytes;
-            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            byte[] passwordByte = Encoding.ASCII.GetBytes(password);
+            byte[] saltByte = Encoding.ASCII.GetBytes(salt);
+            HashAlgorithm algorithm = new SHA256Managed();
+            byte[] plainTextWithSaltBytes = new byte[passwordByte.Length + saltByte.Length];
+            for (int i = 0; i < passwordByte.Length; i++)
             {
-                hashBytes = algorithm.ComputeHash(bytes);
+                plainTextWithSaltBytes[i] = passwordByte[i];
             }
-            return Convert.ToBase64String(hashBytes);
+            for (int i = 0; i < salt.Length; i++)
+            {
+                plainTextWithSaltBytes[passwordByte.Length + i] = saltByte[i];
+            }
+            return algorithm.ComputeHash(plainTextWithSaltBytes);
         }
         public static bool SaveToFile(string name,string login,string password)
         {
@@ -98,12 +104,25 @@ namespace PasswordManager
             string pthPass = Path.Combine(pth, fileName);
             if (!File.Exists(pthPass))
             {
-                using (System.IO.StreamWriter sw = File.CreateText(pth))
+                using (System.IO.StreamWriter sw = File.CreateText(pthPass))
                 {
                 }
             }
-            System.IO.File.WriteAllText(pthPass, Hash(MpassC));
+            System.IO.File.WriteAllText(pthPass, Hash(MpassC).ToString());
         }
+        public static void changeSalt(string salt)
+        {
+            string fileName = "salt.json";
+            string pthPass = Path.Combine(pth, fileName);
+            if (!File.Exists(pthPass))
+            {
+                using (System.IO.StreamWriter sw = File.CreateText(pthPass))
+                {
+                }
+            }
+            System.IO.File.WriteAllText(pthPass, salt);
+        }
+
         public static string loadMasterPassword()
         {
             string fileName = "mpass.json";
@@ -122,6 +141,47 @@ namespace PasswordManager
                 }
             }
             return file;
+        }
+        public static bool removeEntry(int index)
+        {
+            string fileName = "dane.json";
+            string pthFile = Path.Combine(pth, fileName);
+            if (!File.Exists(pthFile))
+            {
+                using (System.IO.StreamWriter sw = File.CreateText(pthFile))
+                {
+
+                }
+            }
+            var json = System.IO.File.ReadAllText(pthFile);
+            var fileData = JsonConvert.DeserializeObject<List<Entry>>(json)
+                ?? new List<Entry>();
+            fileData.Remove(fileData[index]);
+            json = JsonConvert.SerializeObject(fileData);
+            System.IO.File.WriteAllText(pthFile, json);
+            return true;
+        }
+
+       public static bool changeEntry(string name, string login, string password,int index)
+        {
+            string fileName = "dane.json";
+            string pthFile = Path.Combine(pth, fileName);
+            if (!File.Exists(pthFile))
+            {
+                using (System.IO.StreamWriter sw = File.CreateText(pthFile))
+                {
+
+                }
+            }
+            var json = System.IO.File.ReadAllText(pthFile);
+            var fileData = JsonConvert.DeserializeObject<List<Entry>>(json)
+                ?? new List<Entry>();
+            fileData[index].Name = name;
+            fileData[index].Login = login;
+            fileData[index].Password = password;
+            json = JsonConvert.SerializeObject(fileData);
+            System.IO.File.WriteAllText(pthFile, json);
+            return true;
         }
     }
 }

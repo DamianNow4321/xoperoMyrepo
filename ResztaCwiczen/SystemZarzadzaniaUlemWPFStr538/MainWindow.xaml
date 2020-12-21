@@ -1,0 +1,44 @@
+﻿<Window x:Class="SystemZarzadzaniaUlemWPFStr538.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="System Zarządania Ulem" 
+        Height="300" Width="525"
+        ResizeMode="NoResize">
+
+    <StackPanel Margin="5">
+        <TextBlock Text="Przydział prac robotnicą" Margin="0,0,0,5" />
+        <Border BorderThickness="1" BorderBrush="Black">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <StackPanel Margin="0,0,10,0">
+                    <TextBlock Text="Zadanie robotnicy"/>
+                    <ComboBox SelectedIndex="0" >
+                        <ComboBoxItem Content="Zbieranie nektaru"/>
+                        <ComboBoxItem Content="Nauczanie pszczólek"/>
+                        <ComboBoxItem Content="Opieka nad jajami"/>
+                        <ComboBoxItem Content="Utrzymanie ula"/>
+                        <ComboBoxItem Content="Produkcja miodu"/>
+                        <ComboBoxItem Content="Żądli patrol"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Zmiany" />
+                    <TextBox/>
+                </StackPanel>
+                <Button Content="Przydziel tą pracę pszczole" VerticalAlignment="Bottom" Margin="10,0,0,0" />
+            </StackPanel>
+        </Border>
+
+        <Button Content="Przepracuj następną zmianę" Margin="0,20,20,0" 
+                FontSize="18"
+                HorizontalAlignment="Right" />
+        <TextBlock Text="Raport zmiany" Margin="0,10,0,5"/>
+        <Border BorderBrush="Black" BorderThickness="1" Height="100">
+            <ScrollViewer 
+                  Content="Raport zmiany nr. #20&#13;
+Robotnica nr 1 zakończy 'Wytwarzanie miodu' po tej zmianie&#13;
+Robotnica nr 2 robi 'Pielągnacja jaj' jeszcze przez 1 zmiany&#13;
+Robotnica nr 3 nie pracjue&#13;
+Robotnica nr 4 robi Zbieranie nektaru jeszcze przez 2 zmiany&#13;"/>
+        </Border>
+    </StackPanel>
+</Window>
