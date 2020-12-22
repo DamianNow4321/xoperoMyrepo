@@ -49,5 +49,13 @@ namespace PasswordManagerTests
         {
             Entry.Hash("TEST");
         }
+        public void Modify()
+        {
+            Entry.changeEntry("TEST","TEST","TEST",1);
+        }
+        public void Remove()
+        {
+            Entry.removeEntry(1);
+        }
     }
 }
