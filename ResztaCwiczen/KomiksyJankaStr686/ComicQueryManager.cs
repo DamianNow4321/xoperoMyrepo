@@ -29,7 +29,7 @@ namespace KomiksyJankaStr686
                     CreateImageFromAssets("bluegray_250x250.jpg")),
                 new ComicQuery("LINQ jest wszechstronne 2", "Wykonuje obliczenia na kolekcjach","LINQ udostępnia metody rozszerzające dla kolekcji (oraz wszystkich Innych"+ " typów Implementujących In te rfe js IEnumerable<T>).",
                     CreateImageFromAssets("purple_250x250.jpg")),
-                new ComicQuery("LINQ je s t wszechstronne 3","Zapisuje całe wyniki lub 1ch część w nowej sekwencji","Czasami będziesz chciał zachować wyniki zapytania, by 1ch"+"użyć w przyszłości.",
+                new ComicQuery("LINQ jest wszechstronne 3","Zapisuje całe wyniki lub 1ch część w nowej sekwencji","Czasami będziesz chciał zachować wyniki zapytania, by 1ch"+"użyć w przyszłości.",
                     CreateImageFromAssets("bluegray 250x250.jpg")),
                 new ComicQuery("Grupuj komiksy według zakresu cen","Pogrupuj komiksy Janka według cen","Janek kupuje dużo tanich komiksów, trochę średniej wartości "+ " 1 pojedyncze sztuki drogich, Jednak przed zakupem chciałby"+ "wiedzieć, jakie ma możliwości.",
                     CreateImageFromAssets("captain amazing 250x250.jpg")),
