@@ -4,7 +4,7 @@ using System.Linq;
 namespace BasenStr703
 {
     class Program
-    {
+    { 
         static void Main(string[] args)
         {
             Line[] lines = {
@@ -30,7 +30,6 @@ namespace BasenStr703
                         select word + " ";
                         foreach (var word in poem)
                             Console.Write(word);
-
                     }
                 }
             }
