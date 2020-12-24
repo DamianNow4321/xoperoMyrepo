@@ -72,6 +72,8 @@ namespace GUI
                     nazwaChange.Visible = true;
                     loginChange.Visible = true;
                     passChange.Visible = true;
+                    listBox2.Visible = true;
+                    listBox1.Visible = true;
                 }
             }
             else
@@ -126,6 +128,12 @@ namespace GUI
             objEntry = Entry.readFile();
             listBox1.DataSource = objEntry;
             listBox2.DataSource = objEntry;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            objEntry = Entry.readFile();
+            //listBox1.DataSource = objEntry.OrderBy(objEntry => objEntry.Name);
         }
     }
 }

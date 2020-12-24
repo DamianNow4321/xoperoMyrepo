@@ -61,6 +61,7 @@ namespace GUI
             this.nazwaChange = new System.Windows.Forms.TextBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.button7 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -201,6 +202,7 @@ namespace GUI
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button7);
             this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.textBox4);
@@ -217,14 +219,14 @@ namespace GUI
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(128, 17);
+            this.textBox5.Location = new System.Drawing.Point(128, 6);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(154, 20);
             this.textBox5.TabIndex = 5;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(0, 17);
+            this.button3.Location = new System.Drawing.Point(0, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 23);
             this.button3.TabIndex = 4;
@@ -234,7 +236,7 @@ namespace GUI
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(105, 51);
+            this.textBox4.Location = new System.Drawing.Point(105, 35);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(177, 20);
             this.textBox4.TabIndex = 3;
@@ -242,7 +244,7 @@ namespace GUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 51);
+            this.button2.Location = new System.Drawing.Point(0, 32);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 23);
             this.button2.TabIndex = 2;
@@ -253,7 +255,7 @@ namespace GUI
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(105, 80);
+            this.richTextBox1.Location = new System.Drawing.Point(105, 86);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(177, 238);
             this.richTextBox1.TabIndex = 1;
@@ -263,7 +265,7 @@ namespace GUI
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(3, 80);
+            this.listBox1.Location = new System.Drawing.Point(0, 86);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(99, 238);
             this.listBox1.TabIndex = 0;
@@ -302,9 +304,9 @@ namespace GUI
             // 
             // delBtn
             // 
-            this.delBtn.Location = new System.Drawing.Point(171, 180);
+            this.delBtn.Location = new System.Drawing.Point(165, 180);
             this.delBtn.Name = "delBtn";
-            this.delBtn.Size = new System.Drawing.Size(97, 23);
+            this.delBtn.Size = new System.Drawing.Size(103, 23);
             this.delBtn.TabIndex = 8;
             this.delBtn.Text = "Usuń";
             this.delBtn.UseVisualStyleBackColor = true;
@@ -313,9 +315,9 @@ namespace GUI
             // 
             // changeBtn
             // 
-            this.changeBtn.Location = new System.Drawing.Point(171, 151);
+            this.changeBtn.Location = new System.Drawing.Point(165, 151);
             this.changeBtn.Name = "changeBtn";
-            this.changeBtn.Size = new System.Drawing.Size(97, 23);
+            this.changeBtn.Size = new System.Drawing.Size(103, 23);
             this.changeBtn.TabIndex = 7;
             this.changeBtn.Text = "Modyfikuj";
             this.changeBtn.UseVisualStyleBackColor = true;
@@ -378,7 +380,18 @@ namespace GUI
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(120, 277);
             this.listBox2.TabIndex = 0;
+            this.listBox2.Visible = false;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(0, 61);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(99, 23);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Sortuj";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form1
             // 
@@ -433,6 +446,7 @@ namespace GUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox nazwaChange;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button button7;
     }
 }
 
