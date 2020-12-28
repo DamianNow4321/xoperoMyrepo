@@ -117,7 +117,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomiksyJankaStr686", "Komik
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnesyStr699", "MagnesyStr699\MagnesyStr699.csproj", "{DBCADAC6-CA57-4A0C-9999-13AD3FCF1829}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasenStr703", "BasenStr703\BasenStr703.csproj", "{DDAE31E4-FBF4-4860-B4EB-55DA70B03F89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasenStr703", "BasenStr703\BasenStr703.csproj", "{DDAE31E4-FBF4-4860-B4EB-55DA70B03F89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseballStr732", "BaseballStr732\BaseballStr732.csproj", "{BCF6532A-BDE9-4DC2-B7C3-24880249ED01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -357,6 +359,10 @@ Global
 		{DDAE31E4-FBF4-4860-B4EB-55DA70B03F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDAE31E4-FBF4-4860-B4EB-55DA70B03F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDAE31E4-FBF4-4860-B4EB-55DA70B03F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF6532A-BDE9-4DC2-B7C3-24880249ED01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF6532A-BDE9-4DC2-B7C3-24880249ED01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF6532A-BDE9-4DC2-B7C3-24880249ED01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF6532A-BDE9-4DC2-B7C3-24880249ED01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

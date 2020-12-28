@@ -12,7 +12,7 @@ namespace BasenStr703
                 new Line( new string [ ] {"zebras?","hay", "Cows","bridge.","bolted"},2),
                 new Line( new string [ ] {"fork","dogs!","Engine","and"},3),
                 new Line( new string [ ] {"love","they","apples.","eating"},2),
-                new Line( new string [ ] {"whistled.","Bump" }, 1 )
+                new Line( new string [ ] {"whistled.","Bump"}, 1 )
                 };
             var words = from line in lines group line by line.Value into wordGroups orderby wordGroups.Key select wordGroups;
             var twoGroups = words.Take(2);
