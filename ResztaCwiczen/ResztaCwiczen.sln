@@ -123,6 +123,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseballStr732", "BaseballS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZdarzeniaStr746", "ZdarzeniaStr746\ZdarzeniaStr746.csproj", "{4590B411-90D6-4930-906F-F896ECE15970}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZdarzeniaTrasowaneStr753", "ZdarzeniaTrasowaneStr753\ZdarzeniaTrasowaneStr753.csproj", "{DFB75A29-2176-4486-9F1A-79F756592B16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -369,6 +371,10 @@ Global
 		{4590B411-90D6-4930-906F-F896ECE15970}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4590B411-90D6-4930-906F-F896ECE15970}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4590B411-90D6-4930-906F-F896ECE15970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFB75A29-2176-4486-9F1A-79F756592B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB75A29-2176-4486-9F1A-79F756592B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB75A29-2176-4486-9F1A-79F756592B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB75A29-2176-4486-9F1A-79F756592B16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
