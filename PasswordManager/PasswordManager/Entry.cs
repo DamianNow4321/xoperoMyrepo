@@ -31,14 +31,12 @@ namespace PasswordManager
             {
                 using (System.IO.StreamWriter sw = File.CreateText(Path.Combine(pth, "mpass.json")))
                 {
-
                 }
             }
             if (!File.Exists(Path.Combine(pth, "mpass.json")))
             {
                 using (System.IO.StreamWriter sw = File.CreateText(Path.Combine(pth, "mpass.json")))
                 {
-
                 }
             }
             return pth;
@@ -170,7 +168,6 @@ namespace PasswordManager
             {
                 using (System.IO.StreamWriter sw = File.CreateText(pthFile))
                 {
-
                 }
             }
             var json = System.IO.File.ReadAllText(pthFile);
