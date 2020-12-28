@@ -121,6 +121,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasenStr703", "BasenStr703\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseballStr732", "BaseballStr732\BaseballStr732.csproj", "{BCF6532A-BDE9-4DC2-B7C3-24880249ED01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZdarzeniaStr746", "ZdarzeniaStr746\ZdarzeniaStr746.csproj", "{4590B411-90D6-4930-906F-F896ECE15970}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -363,6 +365,10 @@ Global
 		{BCF6532A-BDE9-4DC2-B7C3-24880249ED01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCF6532A-BDE9-4DC2-B7C3-24880249ED01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCF6532A-BDE9-4DC2-B7C3-24880249ED01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4590B411-90D6-4930-906F-F896ECE15970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4590B411-90D6-4930-906F-F896ECE15970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4590B411-90D6-4930-906F-F896ECE15970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4590B411-90D6-4930-906F-F896ECE15970}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
