@@ -14,8 +14,8 @@ namespace PasswordManagerTests
         public void LoadPasswordAndFiles()
         {
             Entry.pth = "C:/Data";
-                string pass = Entry.loadMasterPassword();
-                List<Entry> objEntry = Entry.readFile();
+                string pass = Entry.loadMasterPassword("TEST");
+                List<Entry> objEntry = Entry.readFileAlt();
                 for (int i = 0; i <= objEntry.Count - 1; i++)
                 {
                 System.Console.WriteLine("Nazwa: " + objEntry[i].Name + Environment.NewLine + "Login: " + objEntry[i].Login
@@ -51,11 +51,11 @@ namespace PasswordManagerTests
         }
         public void Modify()
         {
-            Entry.changeEntry("TEST","TEST","TEST",1);
+            Entry.changeEntry("TEST","TEST","TEST");
         }
         public void Remove()
         {
-            Entry.removeEntry(1);
+            Entry.removeEntry("TEST");
         }
     }
 }

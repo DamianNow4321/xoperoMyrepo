@@ -25,15 +25,19 @@ namespace GUI
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Entry.SaveToFile(textBox1.Text,textBox2.Text,textBox3.Text);
-            List<Entry> objEntry = Entry.readFile();
+            bool test=Entry.SaveToFileAlt(textBox1.Text,textBox2.Text,textBox3.Text);
+            List<Entry> objEntry = Entry.readFileAlt();
             listBox1.DataSource = objEntry;
+            if (test == false)
+            {
+                MessageBox.Show("Plik o takej nazwie już istnieje. Zmień nazwę");
+            }
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Entry.pth != null)
             {
-                objEntry = Entry.readFile();
+                objEntry = Entry.readFileAlt();
                 richTextBox1.Text = "Nazwa: " + objEntry[listBox1.SelectedIndex].Name + Environment.NewLine + "Login: " + objEntry[listBox1.SelectedIndex].Login
                 + Environment.NewLine + "Hasło: " + objEntry[listBox1.SelectedIndex].Password;
             }
@@ -48,7 +52,7 @@ namespace GUI
         {
             if (Entry.pth != null)
             {
-                string MPassC = Entry.loadMasterPassword();
+                string MPassC = Entry.loadMasterPassword(textBox5.Text);
                 string mpass = Entry.Hash(textBox5.Text).ToString();
                 if (MPassC == "")
                 {
@@ -87,7 +91,7 @@ namespace GUI
             if (result == DialogResult.OK)
             {
                 Entry.changePath(folderBrowserDialog1.SelectedPath);
-                objEntry = Entry.readFile();
+                objEntry = Entry.readFileAlt();
                 listBox1.DataSource = objEntry;
                 listBox2.DataSource = objEntry;
             }
@@ -107,7 +111,7 @@ namespace GUI
         {
             if (Entry.pth != null)
             {
-                objEntry = Entry.readFile();
+                objEntry = Entry.readFileAlt();
                 nazwaChange.Text = objEntry[listBox2.SelectedIndex].Name;
                 loginChange.Text = objEntry[listBox2.SelectedIndex].Login;
                 passChange.Text = objEntry[listBox2.SelectedIndex].Password;
@@ -116,23 +120,23 @@ namespace GUI
 
         private void delBtn_Click(object sender, EventArgs e)
         {
-            Entry.removeEntry(listBox2.SelectedIndex);
-            objEntry = Entry.readFile();
+            Entry.removeEntry(objEntry[listBox2.SelectedIndex].Name);
+            objEntry = Entry.readFileAlt();
             listBox1.DataSource = objEntry;
             listBox2.DataSource = objEntry;
         }
 
         private void changeBtn_Click(object sender, EventArgs e)
         {
-            Entry.changeEntry(nazwaChange.Text, loginChange.Text, passChange.Text, listBox2.SelectedIndex);
-            objEntry = Entry.readFile();
+            Entry.changeEntry(nazwaChange.Text, loginChange.Text, passChange.Text);
+            objEntry = Entry.readFileAlt();
             listBox1.DataSource = objEntry;
             listBox2.DataSource = objEntry;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            objEntry = Entry.readFile();
+            objEntry = Entry.readFileAlt();
             //listBox1.DataSource = objEntry.OrderBy(objEntry => objEntry.Name);
         }
     }
