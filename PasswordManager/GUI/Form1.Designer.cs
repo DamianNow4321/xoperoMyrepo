@@ -357,6 +357,7 @@ namespace GUI
             this.loginChange.Name = "loginChange";
             this.loginChange.Size = new System.Drawing.Size(100, 20);
             this.loginChange.TabIndex = 4;
+            this.loginChange.Visible = false;
             // 
             // label5
             // 
