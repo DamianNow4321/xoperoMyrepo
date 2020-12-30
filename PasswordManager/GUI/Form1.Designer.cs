@@ -43,6 +43,7 @@ namespace GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -57,11 +58,10 @@ namespace GUI
             this.passChange = new System.Windows.Forms.TextBox();
             this.loginChange = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.nazwaChange = new System.Windows.Forms.TextBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.button7 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.nazwaChange = new System.Windows.Forms.TextBox();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -217,6 +217,16 @@ namespace GUI
             this.tabPage1.Text = "Menedżer Haseł";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(0, 61);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(99, 23);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Sortuj";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(128, 6);
@@ -357,6 +367,16 @@ namespace GUI
             this.label5.TabIndex = 3;
             this.label5.Text = "Login";
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(19, 25);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(120, 277);
+            this.listBox2.TabIndex = 0;
+            this.listBox2.Visible = false;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -370,28 +390,9 @@ namespace GUI
             // 
             this.nazwaChange.Location = new System.Drawing.Point(165, 47);
             this.nazwaChange.Name = "nazwaChange";
+            this.nazwaChange.ReadOnly = true;
             this.nazwaChange.Size = new System.Drawing.Size(100, 20);
             this.nazwaChange.TabIndex = 1;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(19, 25);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 277);
-            this.listBox2.TabIndex = 0;
-            this.listBox2.Visible = false;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(0, 61);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(99, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Sortuj";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form1
             // 
@@ -443,10 +444,10 @@ namespace GUI
         private System.Windows.Forms.TextBox passChange;
         private System.Windows.Forms.TextBox loginChange;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox nazwaChange;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox nazwaChange;
     }
 }
 

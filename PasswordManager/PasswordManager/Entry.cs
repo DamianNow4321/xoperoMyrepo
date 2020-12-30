@@ -203,7 +203,7 @@ namespace PasswordManager
             var fileData = JsonConvert.DeserializeObject<List<Entry>>(json)
                 ?? new List<Entry>();
             File.Delete(pthFile);
-            fileData[0].Name = name;
+            //fileData[0].Name = name;
             fileData[0].Login = login;
             fileData[0].Password = password;
             json = JsonConvert.SerializeObject(fileData);
