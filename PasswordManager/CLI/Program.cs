@@ -65,13 +65,11 @@ namespace CLI
                             Entry.changePath(pathLoc);
                             break;
                         case "/modifyentry":
-                            Console.WriteLine($"Wpisz numer wpisu do modyfikacji");
-                            int index = int.Parse(Console.ReadLine());
-                            Console.WriteLine($"Wpisz nazwę serwisu");
+                            Console.WriteLine($"Wpisz nazwę wpisu do modyfikacji");
                             name = Console.ReadLine();
-                            Console.WriteLine($"Wpisz login");
+                            Console.WriteLine($"Wpisz nowy login");
                             login = Console.ReadLine();
-                            Console.WriteLine($"Wpisz hasło");
+                            Console.WriteLine($"Wpisz nowe hasło");
                             password = Console.ReadLine();
                             Entry.changeEntry(name, login, password);
                             break;
