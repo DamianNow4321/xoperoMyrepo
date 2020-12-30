@@ -1,0 +1,20 @@
+﻿<Window x:Class="KoszykowkaStr774.View.LeagueWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoszykowkaStr774.View" xmlns:viewmodel="clr-namespace:KoszykowkaStr774.ViewModel"
+        mc:Ignorable="d"
+        Title="Liga 'Koszykówka Rusz głową'" Height="515" Width="533" ResizeMode="NoResize" Background="Black" >
+
+    <Window.Resources>
+        <viewmodel:LeagueViewModel x:Key="LeagueViewModel"/>
+    </Window.Resources>
+
+    <StackPanel Orientation="Horizontal" Margin="5" 
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                DataContext="{StaticResource ResourceKey=LeagueViewModel}" >
+        <local:RosterControl Width="262" DataContext="{Binding JimmysTeam}" Margin="0,0,20,0" Height="394" />
+        <local:RosterControl Width="237" DataContext="{Binding BriansTeam}" Height="394" RenderTransformOrigin="0.5,0.5" />
+    </StackPanel>
+</Window>
