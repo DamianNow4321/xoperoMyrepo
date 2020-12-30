@@ -133,11 +133,5 @@ namespace GUI
             listBox1.DataSource = objEntry;
             listBox2.DataSource = objEntry;
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            objEntry = Entry.readFileAlt();
-            //listBox1.DataSource = objEntry.OrderBy(objEntry => objEntry.Name);
-        }
     }
 }
