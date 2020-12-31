@@ -133,6 +133,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoszykowkaStr774", "Koszyko
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoperStr789", "StoperStr789\StoperStr789.csproj", "{3D0BAC1A-B2D2-4C88-B050-D98A89FBD08C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimowanaPszczolaStr816", "AnimowanaPszczolaStr816\AnimowanaPszczolaStr816.csproj", "{71FC5ADA-1B9F-443E-9134-15F873BA0D58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -399,6 +401,10 @@ Global
 		{3D0BAC1A-B2D2-4C88-B050-D98A89FBD08C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D0BAC1A-B2D2-4C88-B050-D98A89FBD08C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D0BAC1A-B2D2-4C88-B050-D98A89FBD08C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71FC5ADA-1B9F-443E-9134-15F873BA0D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71FC5ADA-1B9F-443E-9134-15F873BA0D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71FC5ADA-1B9F-443E-9134-15F873BA0D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71FC5ADA-1B9F-443E-9134-15F873BA0D58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
