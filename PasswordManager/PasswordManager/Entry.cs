@@ -164,17 +164,17 @@ namespace PasswordManager
             string fileDataRead = File.ReadAllText(pthPass);
             return fileDataRead;
         }
-        public static List<Entry> searchPasswords(string sName)
+        public static List<Entry> searchPasswords(string sName, List<Entry> objEntry)
         {
-            List<Entry> file = readFileAlt();
-            for (int i = 0; i <= file.Count - 1; i++)
+            List<Entry> fileSearched = new List<Entry>();
+            for (int i = 0; i <= objEntry.Count - 1; i++)
             {
-                if(file[i].Name != sName)
+                if(objEntry[i].Name == sName)
                 {
-                    file.RemoveAt(i);
+                    fileSearched.Add(objEntry[i]);
                 }
             }
-            return file;
+            return fileSearched;
         }
         public static bool removeEntry(string name)
         {

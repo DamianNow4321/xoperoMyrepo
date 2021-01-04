@@ -44,8 +44,7 @@ namespace GUI
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            objEntry=Entry.searchPasswords(textBox4.Text);
-            listBox1.DataSource = objEntry;
+            listBox1.DataSource = Entry.searchPasswords(textBox4.Text,objEntry);
         }
 
         private void button3_Click(object sender, EventArgs e)
