@@ -80,11 +80,11 @@ namespace CLI
                         case "/search":
                             Console.WriteLine($"Wpisz nazwę");
                             string searchName = Console.ReadLine();
-                            objEntry=Entry.searchPasswords(searchName,objEntry);
+                            List<Entry> searchRes =Entry.searchPasswords(searchName,objEntry);
                             for (int i = 0; i <= objEntry.Count - 1; i++)
                             {
-                                Console.WriteLine("Nazwa: " + objEntry[i].Name + Environment.NewLine + "Login: " + objEntry[i].Login
-                                + Environment.NewLine + "Hasło: " + objEntry[i].Password);
+                                Console.WriteLine("Nazwa: " + searchRes[i].Name + Environment.NewLine + "Login: " + searchRes[i].Login
+                                + Environment.NewLine + "Hasło: " + searchRes[i].Password);
                             }
                             break;
                         case "/check":

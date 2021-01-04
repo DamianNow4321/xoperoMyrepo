@@ -27,7 +27,7 @@ namespace PasswordManagerTests
         public void AddEntry()
         {
             Entry.pth = "C:/Data";
-                Entry.SaveToFile("TEST", "TEST", "TEST");
+                Entry.SaveToFileAlt("TEST", "TEST", "TEST");
         }
         [TestMethod]
         public void ChangePath()
@@ -43,7 +43,9 @@ namespace PasswordManagerTests
         [TestMethod]
         public void SearchPasswords()
         {
-                Entry.searchPasswords("TEST");
+            List<Entry> objEntry;
+            objEntry = Entry.readFileAlt();
+            Entry.searchPasswords("TEST", objEntry);
         }
         public void Hash()
         {

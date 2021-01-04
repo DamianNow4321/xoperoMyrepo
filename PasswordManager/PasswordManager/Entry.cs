@@ -61,27 +61,6 @@ namespace PasswordManager
             }
             return algorithm.ComputeHash(plainTextWithSaltBytes);
         }
-        public static bool SaveToFile(string name,string login,string password)
-        {
-            Entry newEntry = new Entry(login, password, name);
-            newEntry.Serialize(newEntry);
-            string fileName = "dane.json";
-            string pthFile = Path.Combine(pth, fileName);
-            if (!File.Exists(pthFile))
-            {
-                using (System.IO.StreamWriter sw = File.CreateText(pthFile))
-                {
-
-                }
-            }
-            var json = System.IO.File.ReadAllText(pthFile);
-            var fileData = JsonConvert.DeserializeObject<List<Entry>>(json)
-                ?? new List<Entry>();
-            fileData.Add(newEntry);
-            json = JsonConvert.SerializeObject(fileData);
-            System.IO.File.WriteAllText(pthFile, json);
-            return true;
-        }
         public static bool SaveToFileAlt(string name, string login, string password)
         {
             Entry newEntry = new Entry(login, password, name);
@@ -106,14 +85,6 @@ namespace PasswordManager
             json = JsonConvert.SerializeObject(fileData);
             System.IO.File.WriteAllText(pthFile, json);
             return true;
-        }
-        public static List<Entry> readFile()
-        {
-            string fileName = "dane.json";
-            string pthFile = Path.Combine(pth, fileName);
-            string fileDataRead = File.ReadAllText(pthFile);
-            var objEntry = JsonConvert.DeserializeObject<List<Entry>>(fileDataRead);
-            return objEntry;
         }
         public static List<Entry> readFileAlt()
         {
