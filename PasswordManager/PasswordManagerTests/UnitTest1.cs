@@ -14,20 +14,19 @@ namespace PasswordManagerTests
         public void LoadPasswordAndFiles()
         {
             Entry.pth = "C:/Data";
-                string pass = Entry.loadMasterPassword();
-                List<Entry> objEntry = Entry.readFile();
+                string pass = Entry.loadMasterPassword("TEST");
+                List<Entry> objEntry = Entry.readFileAlt();
                 for (int i = 0; i <= objEntry.Count - 1; i++)
                 {
                 System.Console.WriteLine("Nazwa: " + objEntry[i].Name + Environment.NewLine + "Login: " + objEntry[i].Login
                                    + Environment.NewLine + "Has³o: " + objEntry[i].Password);
                 }
-
         }
         [TestMethod]
         public void AddEntry()
         {
             Entry.pth = "C:/Data";
-                Entry.SaveToFile("TEST", "TEST", "TEST");
+                Entry.SaveToFileAlt("TEST", "TEST", "TEST");
         }
         [TestMethod]
         public void ChangePath()
@@ -43,19 +42,28 @@ namespace PasswordManagerTests
         [TestMethod]
         public void SearchPasswords()
         {
-                Entry.searchPasswords("TEST");
+            List<Entry> objEntry= Entry.readFileAlt();
+            Entry.searchPasswords("TEST", objEntry);
         }
+        [TestMethod]
         public void Hash()
         {
             Entry.Hash("TEST");
         }
+        [TestMethod]
         public void Modify()
         {
-            Entry.changeEntry("TEST","TEST","TEST",1);
+            Entry.changeEntry("TEST","TEST","TEST");
         }
+        [TestMethod]
         public void Remove()
         {
-            Entry.removeEntry(1);
+            Entry.removeEntry("TEST");
+        }
+        [TestMethod]
+        public void Read()
+        {
+            Entry.readFileAlt();
         }
     }
 }
