@@ -45,17 +45,25 @@ namespace PasswordManagerTests
             List<Entry> objEntry= Entry.readFileAlt();
             Entry.searchPasswords("TEST", objEntry);
         }
+        [TestMethod]
         public void Hash()
         {
             Entry.Hash("TEST");
         }
+        [TestMethod]
         public void Modify()
         {
             Entry.changeEntry("TEST","TEST","TEST");
         }
+        [TestMethod]
         public void Remove()
         {
             Entry.removeEntry("TEST");
+        }
+        [TestMethod]
+        public void Read()
+        {
+            Entry.readFileAlt();
         }
     }
 }
