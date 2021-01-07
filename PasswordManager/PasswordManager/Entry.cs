@@ -61,9 +61,10 @@ namespace PasswordManager
             }
             return algorithm.ComputeHash(plainTextWithSaltBytes);
         }
-        public static bool SaveToFileAlt(string name, string login, string password)
+        public static bool SaveToFileAlt(string name, string login, string password,string mpass)
         {
-            Entry newEntry = new Entry(login, password, name);
+            string EncryptedPass = EncryptString(mpass, password);
+            Entry newEntry = new Entry(login, EncryptedPass, name);
             newEntry.Serialize(newEntry);
             string fileName = name+".json";
             string pthFile = Path.Combine(pth, fileName);
@@ -86,13 +87,16 @@ namespace PasswordManager
             System.IO.File.WriteAllText(pthFile, json);
             return true;
         }
-        public static List<Entry> readFileAlt()
+        public static List<Entry> readFileAlt(string mpass)
         {
+            int i=0;
             var objEntry=new List<Entry>();
             foreach (string fileName in Directory.GetFiles(pth, "*.json")){
                 string pthFile = Path.Combine(pth, fileName);
                 string fileDataRead = File.ReadAllText(pthFile);
                 objEntry.AddRange(JsonConvert.DeserializeObject<List<Entry>>(fileDataRead));
+                objEntry[i].Password = DecryptString(mpass,objEntry[i].Password);
+                i = i + 1;
             }
             return objEntry;
         }
@@ -106,7 +110,8 @@ namespace PasswordManager
                 {
                 }
             }
-            System.IO.File.WriteAllText(pthPass, Hash(MpassC).ToString());
+            string hashpass = System.Text.Encoding.Default.GetString(Hash(MpassC));
+            System.IO.File.WriteAllText(pthPass, hashpass);
         }
         public static void changeSalt(string salt)
         {
@@ -189,7 +194,6 @@ namespace PasswordManager
             {
                 aes.Key = Encoding.UTF8.GetBytes(key);
                 aes.IV = iv;
-
                 ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
 
                 using (MemoryStream memoryStream = new MemoryStream())

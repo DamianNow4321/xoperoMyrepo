@@ -15,6 +15,7 @@ namespace CLI
             string login;
             string password;
             string pathLoc;
+            string key;
             bool cont = true;
             string mpass;
             if (Entry.pth == null)
@@ -24,6 +25,7 @@ namespace CLI
             }
             Console.WriteLine("Proszę wpisać hasło");
             mpass = Entry.Hash(Console.ReadLine()).ToString();
+            key = Entry.loadMasterPassword(Console.ReadLine());
             string MPassC = Entry.loadMasterPassword(Console.ReadLine());
             bool firstTime =true;
             if (MPassC == "")
@@ -34,7 +36,7 @@ namespace CLI
             {
                 while (cont == true)
                 {
-                    List<Entry> objEntry = Entry.readFileAlt();
+                    List<Entry> objEntry = Entry.readFileAlt(key);
                     Console.WriteLine("Jeśli chcesz wyświetlić zapisane hasła wpisz /check.Jeśli chcesz wyszukać hasło wpisz /search." +
                         "Jeśli chcesz zmianić hasło dostępu wpisz /change.Jeśli chcesz zmienić folder z hasłami wpisz /folder. " +
                         "Jeśli chcesz dodać wpis wpisz /add. Jeśli chcesz zmienić salt do hashowania wpisz /changeSalt " +
@@ -49,7 +51,7 @@ namespace CLI
                             login = Console.ReadLine();
                             Console.WriteLine($"Wpisz hasło");
                             password = Console.ReadLine();
-                            Entry.SaveToFileAlt(name, login, password);
+                            Entry.SaveToFileAlt(name, login, password,key);
                             break;
                         case "/changeSalt":
                             Console.WriteLine($"Wpisz salt");
