@@ -168,7 +168,7 @@ namespace PasswordManager
             string pthFile = Path.Combine(pth, fileName);
             if (!File.Exists(pthFile))
             {
-                return false;
+               return false;
             }
             var json = System.IO.File.ReadAllText(pthFile);
             var fileData = JsonConvert.DeserializeObject<List<Entry>>(json)
