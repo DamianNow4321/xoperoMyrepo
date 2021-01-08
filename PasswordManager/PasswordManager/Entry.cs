@@ -72,7 +72,6 @@ namespace PasswordManager
             {
                 using (System.IO.StreamWriter sw = File.CreateText(pthFile))
                 {
-
                 }
             }
             else

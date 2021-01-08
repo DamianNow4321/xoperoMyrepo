@@ -25,8 +25,8 @@ namespace CLI
             }
             Console.WriteLine("Proszę wpisać hasło");
             mpass = Entry.Hash(Console.ReadLine()).ToString();
-            key = Entry.loadMasterPassword(Console.ReadLine());
-            string MPassC = Entry.loadMasterPassword(Console.ReadLine());
+            key = "b14ca5898a4e4133bbce2ea2315a1916";
+            string MPassC = Entry.loadMasterPassword(mpass);
             bool firstTime =true;
             if (MPassC == "")
             {

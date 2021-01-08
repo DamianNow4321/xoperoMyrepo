@@ -63,7 +63,13 @@ namespace PasswordManagerTests
         [TestMethod]
         public void Read()
         {
-            Entry.readFileAlt();
+            Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
+        }
+        public void EncryptDecrypt()
+        {
+            Entry.EncryptString("b14ca5898a4e4133bbce2ea2315a1916", "TEST");
+            Entry.DecryptString("b14ca5898a4e4133bbce2ea2315a1916", "TEST");
+
         }
     }
 }
