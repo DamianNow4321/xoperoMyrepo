@@ -42,6 +42,7 @@ namespace GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -60,7 +61,6 @@ namespace GUI
             this.nazwaChange = new System.Windows.Forms.TextBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.button4 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -205,6 +205,16 @@ namespace GUI
             this.tabPage1.Text = "Menedżer Haseł";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(282, 23);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Wybierz folder z plikami";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(128, 28);
@@ -224,9 +234,9 @@ namespace GUI
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(105, 57);
+            this.textBox4.Location = new System.Drawing.Point(128, 57);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(177, 20);
+            this.textBox4.Size = new System.Drawing.Size(154, 20);
             this.textBox4.TabIndex = 3;
             this.textBox4.Visible = false;
             // 
@@ -234,7 +244,7 @@ namespace GUI
             // 
             this.button2.Location = new System.Drawing.Point(0, 57);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 23);
+            this.button2.Size = new System.Drawing.Size(122, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "Wyszukaj";
             this.button2.UseVisualStyleBackColor = true;
@@ -243,9 +253,9 @@ namespace GUI
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(105, 86);
+            this.richTextBox1.Location = new System.Drawing.Point(128, 86);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(177, 238);
+            this.richTextBox1.Size = new System.Drawing.Size(154, 238);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             this.richTextBox1.Visible = false;
@@ -255,7 +265,7 @@ namespace GUI
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(0, 86);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(99, 238);
+            this.listBox1.Size = new System.Drawing.Size(122, 238);
             this.listBox1.TabIndex = 0;
             this.listBox1.Visible = false;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -372,16 +382,6 @@ namespace GUI
             this.listBox2.TabIndex = 0;
             this.listBox2.Visible = false;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(282, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Wybierz folder z plikami";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
