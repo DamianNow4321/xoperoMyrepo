@@ -15,7 +15,6 @@ namespace GUI
 {
     public partial class Form1 : Form
     {
-        string key;
         bool firstTime = true;
         List<Entry> objEntry;
         public Form1()
