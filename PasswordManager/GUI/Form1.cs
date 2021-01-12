@@ -25,8 +25,9 @@ namespace GUI
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            bool test=Entry.SaveToFileAlt(textBox1.Text,textBox2.Text,textBox3.Text);
-            List<Entry> objEntry = Entry.readFileAlt();
+            key = Entry.loadMasterPassword("T");
+            bool test=Entry.SaveToFileAlt(textBox1.Text,textBox2.Text,textBox3.Text, "b14ca5898a4e4133bbce2ea2315a1916");
+            List<Entry> objEntry = Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
             listBox1.DataSource = objEntry;
             if (test == false)
             {
@@ -37,7 +38,7 @@ namespace GUI
         {
             if (Entry.pth != null)
             {
-                objEntry = Entry.readFileAlt();
+                objEntry = Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
                 richTextBox1.Text = "Nazwa: " + objEntry[listBox1.SelectedIndex].Name + Environment.NewLine + "Login: " + objEntry[listBox1.SelectedIndex].Login
                 + Environment.NewLine + "Hasło: " + objEntry[listBox1.SelectedIndex].Password;
             }
@@ -52,6 +53,7 @@ namespace GUI
             if (Entry.pth != null)
             {
                 string MPassC = Entry.loadMasterPassword(textBox5.Text);
+                key = Entry.loadMasterPassword(textBox5.Text);
                 string mpass = Entry.Hash(textBox5.Text).ToString();
                 if (MPassC == "")
                 {
@@ -77,6 +79,7 @@ namespace GUI
                     passChange.Visible = true;
                     listBox2.Visible = true;
                     listBox1.Visible = true;
+                    button6.Visible = true;
                 }
             }
             else
@@ -90,7 +93,7 @@ namespace GUI
             if (result == DialogResult.OK)
             {
                 Entry.changePath(folderBrowserDialog1.SelectedPath);
-                objEntry = Entry.readFileAlt();
+                objEntry = Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
                 listBox1.DataSource = objEntry;
                 listBox2.DataSource = objEntry;
             }
@@ -110,7 +113,7 @@ namespace GUI
         {
             if (Entry.pth != null)
             {
-                objEntry = Entry.readFileAlt();
+                objEntry = Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
                 nazwaChange.Text = objEntry[listBox2.SelectedIndex].Name;
                 loginChange.Text = objEntry[listBox2.SelectedIndex].Login;
                 passChange.Text = objEntry[listBox2.SelectedIndex].Password;
@@ -120,7 +123,7 @@ namespace GUI
         private void delBtn_Click(object sender, EventArgs e)
         {
             Entry.removeEntry(objEntry[listBox2.SelectedIndex].Name);
-            objEntry = Entry.readFileAlt();
+            objEntry = Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
             listBox1.DataSource = objEntry;
             listBox2.DataSource = objEntry;
         }
@@ -128,7 +131,7 @@ namespace GUI
         private void changeBtn_Click(object sender, EventArgs e)
         {
             Entry.changeEntry(nazwaChange.Text, loginChange.Text, passChange.Text);
-            objEntry = Entry.readFileAlt();
+            objEntry = Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
             listBox1.DataSource = objEntry;
             listBox2.DataSource = objEntry;
         }

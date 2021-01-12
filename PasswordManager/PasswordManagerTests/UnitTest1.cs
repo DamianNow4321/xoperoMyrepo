@@ -15,7 +15,7 @@ namespace PasswordManagerTests
         {
             Entry.pth = "C:/Data";
                 string pass = Entry.loadMasterPassword("TEST");
-                List<Entry> objEntry = Entry.readFileAlt();
+                List<Entry> objEntry = Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
                 for (int i = 0; i <= objEntry.Count - 1; i++)
                 {
                 System.Console.WriteLine("Nazwa: " + objEntry[i].Name + Environment.NewLine + "Login: " + objEntry[i].Login
@@ -26,7 +26,7 @@ namespace PasswordManagerTests
         public void AddEntry()
         {
             Entry.pth = "C:/Data";
-                Entry.SaveToFileAlt("TEST", "TEST", "TEST");
+                Entry.SaveToFileAlt("TEST", "TEST", "TEST", "b14ca5898a4e4133bbce2ea2315a1916");
         }
         [TestMethod]
         public void ChangePath()
@@ -42,7 +42,7 @@ namespace PasswordManagerTests
         [TestMethod]
         public void SearchPasswords()
         {
-            List<Entry> objEntry= Entry.readFileAlt();
+            List<Entry> objEntry= Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
             Entry.searchPasswords("TEST", objEntry);
         }
         [TestMethod]
@@ -63,7 +63,12 @@ namespace PasswordManagerTests
         [TestMethod]
         public void Read()
         {
-            Entry.readFileAlt();
+            Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
+        }
+        public void EncryptDecrypt()
+        {
+            Entry.EncryptString("b14ca5898a4e4133bbce2ea2315a1916", "TEST");
+            Entry.DecryptString("b14ca5898a4e4133bbce2ea2315a1916", "TEST");
         }
     }
 }

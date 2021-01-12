@@ -61,9 +61,10 @@ namespace PasswordManager
             }
             return algorithm.ComputeHash(plainTextWithSaltBytes);
         }
-        public static bool SaveToFileAlt(string name, string login, string password)
+        public static bool SaveToFileAlt(string name, string login, string password,string mpass)
         {
-            Entry newEntry = new Entry(login, password, name);
+            string EncryptedPass = EncryptString(mpass, password);
+            Entry newEntry = new Entry(login, EncryptedPass, name);
             newEntry.Serialize(newEntry);
             string fileName = name+".json";
             string pthFile = Path.Combine(pth, fileName);
@@ -71,7 +72,6 @@ namespace PasswordManager
             {
                 using (System.IO.StreamWriter sw = File.CreateText(pthFile))
                 {
-
                 }
             }
             else
@@ -86,13 +86,16 @@ namespace PasswordManager
             System.IO.File.WriteAllText(pthFile, json);
             return true;
         }
-        public static List<Entry> readFileAlt()
+        public static List<Entry> readFileAlt(string mpass)
         {
+            int i=0;
             var objEntry=new List<Entry>();
             foreach (string fileName in Directory.GetFiles(pth, "*.json")){
                 string pthFile = Path.Combine(pth, fileName);
                 string fileDataRead = File.ReadAllText(pthFile);
                 objEntry.AddRange(JsonConvert.DeserializeObject<List<Entry>>(fileDataRead));
+                objEntry[i].Password = DecryptString(mpass,objEntry[i].Password);
+                i = i + 1;
             }
             return objEntry;
         }
@@ -106,7 +109,8 @@ namespace PasswordManager
                 {
                 }
             }
-            System.IO.File.WriteAllText(pthPass, Hash(MpassC).ToString());
+            string hashpass = System.Text.Encoding.Default.GetString(Hash(MpassC));
+            System.IO.File.WriteAllText(pthPass, hashpass);
         }
         public static void changeSalt(string salt)
         {
@@ -168,18 +172,62 @@ namespace PasswordManager
             string pthFile = Path.Combine(pth, fileName);
             if (!File.Exists(pthFile))
             {
-                return false;
+               return false;
             }
             var json = System.IO.File.ReadAllText(pthFile);
             var fileData = JsonConvert.DeserializeObject<List<Entry>>(json)
                 ?? new List<Entry>();
             File.Delete(pthFile);
-            //fileData[0].Name = name;
             fileData[0].Login = login;
             fileData[0].Password = password;
             json = JsonConvert.SerializeObject(fileData);
             System.IO.File.WriteAllText(pthFile, json);
             return true;
+        }
+        public static string EncryptString(string key, string plainText)
+        {
+            byte[] iv = new byte[16];
+            byte[] array;
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = Encoding.UTF8.GetBytes(key);
+                aes.IV = iv;
+                ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
+
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    using (CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter streamWriter = new StreamWriter((Stream)cryptoStream))
+                        {
+                            streamWriter.Write(plainText);
+                        }
+                        array = memoryStream.ToArray();
+                    }
+                }
+            }
+            return Convert.ToBase64String(array);
+        }
+        public static string DecryptString(string key, string cipherText)
+        {
+            byte[] iv = new byte[16];
+            byte[] buffer = Convert.FromBase64String(cipherText);
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = Encoding.UTF8.GetBytes(key);
+                aes.IV = iv;
+                ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+                using (MemoryStream memoryStream = new MemoryStream(buffer))
+                {
+                    using (CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader streamReader = new StreamReader((Stream)cryptoStream))
+                        {
+                            return streamReader.ReadToEnd();
+                        }
+                    }
+                }
+            }
         }
     }
 }

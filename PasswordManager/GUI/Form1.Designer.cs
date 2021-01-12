@@ -34,7 +34,6 @@ namespace GUI
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -43,6 +42,7 @@ namespace GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -73,7 +73,6 @@ namespace GUI
             this.tabPage2.Controls.Add(this.textBox7);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.textBox6);
-            this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.textBox3);
             this.tabPage2.Controls.Add(this.textBox2);
@@ -126,16 +125,6 @@ namespace GUI
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 8;
             this.textBox6.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(129, 20);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Wybierz folder z plikami";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
@@ -201,6 +190,7 @@ namespace GUI
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.textBox4);
@@ -215,16 +205,26 @@ namespace GUI
             this.tabPage1.Text = "Menedżer Haseł";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(282, 23);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Wybierz folder z plikami";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(128, 6);
+            this.textBox5.Location = new System.Drawing.Point(128, 28);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(154, 20);
             this.textBox5.TabIndex = 5;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(0, 3);
+            this.button3.Location = new System.Drawing.Point(0, 28);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 23);
             this.button3.TabIndex = 4;
@@ -234,17 +234,17 @@ namespace GUI
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(105, 35);
+            this.textBox4.Location = new System.Drawing.Point(128, 57);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(177, 20);
+            this.textBox4.Size = new System.Drawing.Size(154, 20);
             this.textBox4.TabIndex = 3;
             this.textBox4.Visible = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 32);
+            this.button2.Location = new System.Drawing.Point(0, 57);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 23);
+            this.button2.Size = new System.Drawing.Size(122, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "Wyszukaj";
             this.button2.UseVisualStyleBackColor = true;
@@ -253,9 +253,9 @@ namespace GUI
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(105, 86);
+            this.richTextBox1.Location = new System.Drawing.Point(128, 86);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(177, 238);
+            this.richTextBox1.Size = new System.Drawing.Size(154, 238);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             this.richTextBox1.Visible = false;
@@ -265,7 +265,7 @@ namespace GUI
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(0, 86);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(99, 238);
+            this.listBox1.Size = new System.Drawing.Size(122, 238);
             this.listBox1.TabIndex = 0;
             this.listBox1.Visible = false;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -420,7 +420,6 @@ namespace GUI
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox6;
@@ -436,6 +435,7 @@ namespace GUI
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox nazwaChange;
+        private System.Windows.Forms.Button button4;
     }
 }
 
