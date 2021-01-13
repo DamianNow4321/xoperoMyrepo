@@ -143,7 +143,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnesyStr124", "MagnesyStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasenStr169", "BasenStr169\BasenStr169.csproj", "{735A5FE1-FF39-434A-A282-7E653ACE822C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasenStr214", "BasenStr214\BasenStr214.csproj", "{1AF88BF2-6466-4124-A1B7-9762441695E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasenStr214", "BasenStr214\BasenStr214.csproj", "{1AF88BF2-6466-4124-A1B7-9762441695E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnesyStr213", "MagnesyStr213\MagnesyStr213.csproj", "{659592FB-6C03-4F93-B370-5470180E186E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasenStr301", "BasenStr301\BasenStr301.csproj", "{57C72B18-A7FF-4136-8599-8936F44772EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -435,6 +439,14 @@ Global
 		{1AF88BF2-6466-4124-A1B7-9762441695E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AF88BF2-6466-4124-A1B7-9762441695E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AF88BF2-6466-4124-A1B7-9762441695E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{659592FB-6C03-4F93-B370-5470180E186E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{659592FB-6C03-4F93-B370-5470180E186E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{659592FB-6C03-4F93-B370-5470180E186E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{659592FB-6C03-4F93-B370-5470180E186E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57C72B18-A7FF-4136-8599-8936F44772EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57C72B18-A7FF-4136-8599-8936F44772EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57C72B18-A7FF-4136-8599-8936F44772EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57C72B18-A7FF-4136-8599-8936F44772EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
