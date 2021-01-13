@@ -25,7 +25,6 @@ namespace GUI
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            key = Entry.loadMasterPassword("T");
             bool test=Entry.SaveToFileAlt(textBox1.Text,textBox2.Text,textBox3.Text, "b14ca5898a4e4133bbce2ea2315a1916");
             List<Entry> objEntry = Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
             listBox1.DataSource = objEntry;
@@ -53,7 +52,6 @@ namespace GUI
             if (Entry.pth != null)
             {
                 string MPassC = Entry.loadMasterPassword(textBox5.Text);
-                key = Entry.loadMasterPassword(textBox5.Text);
                 string mpass = Entry.Hash(textBox5.Text).ToString();
                 if (MPassC == "")
                 {
