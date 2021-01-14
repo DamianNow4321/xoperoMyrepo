@@ -13,7 +13,7 @@ namespace PasswordManagerTests
         [TestMethod]
         public void LoadPasswordAndFiles()
         {
-            Entry.pth = "C:/Data";
+                Entry.pth = "C:/Data";
                 string pass = Entry.loadMasterPassword("TEST");
                 List<Entry> objEntry = Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
                 for (int i = 0; i <= objEntry.Count - 1; i++)
@@ -26,13 +26,13 @@ namespace PasswordManagerTests
         public void AddEntry()
         {
             Entry.pth = "C:/Data";
-                Entry.SaveToFileAlt("TEST", "TEST", "TEST", "b14ca5898a4e4133bbce2ea2315a1916");
+            Entry.SaveToFileAlt("TEST", "TEST", "TEST", "b14ca5898a4e4133bbce2ea2315a1916");
         }
         [TestMethod]
         public void ChangePath()
         {
             Entry.pth = "C:/Data";
-                Entry.changePath("D:/Data");
+            Entry.changePath("D:/Data");
         }
         [TestMethod]
         public void ChangePassword()
@@ -69,6 +69,10 @@ namespace PasswordManagerTests
         {
             Entry.EncryptString("b14ca5898a4e4133bbce2ea2315a1916", "TEST");
             Entry.DecryptString("b14ca5898a4e4133bbce2ea2315a1916", "TEST");
+        }
+        public void changePath()
+        {
+            Entry.changePath("C:/Data");
         }
     }
 }
