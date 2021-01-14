@@ -57,11 +57,13 @@ namespace GUI
             this.nazwaChange = new System.Windows.Forms.TextBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -167,9 +169,9 @@ namespace GUI
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Location = new System.Drawing.Point(3, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(304, 23);
+            this.button4.Size = new System.Drawing.Size(298, 23);
             this.button4.TabIndex = 8;
             this.button4.Text = "Wybierz folder z plikami";
             this.button4.UseVisualStyleBackColor = true;
@@ -184,9 +186,9 @@ namespace GUI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(0, 28);
+            this.button3.Location = new System.Drawing.Point(3, 28);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 23);
+            this.button3.Size = new System.Drawing.Size(119, 23);
             this.button3.TabIndex = 4;
             this.button3.Text = "Wpisz hasło dostępu";
             this.button3.UseVisualStyleBackColor = true;
@@ -202,9 +204,9 @@ namespace GUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 57);
+            this.button2.Location = new System.Drawing.Point(3, 57);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 23);
+            this.button2.Size = new System.Drawing.Size(119, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "Wyszukaj";
             this.button2.UseVisualStyleBackColor = true;
@@ -223,9 +225,9 @@ namespace GUI
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(0, 86);
+            this.listBox1.Location = new System.Drawing.Point(3, 86);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(122, 225);
+            this.listBox1.Size = new System.Drawing.Size(119, 225);
             this.listBox1.TabIndex = 0;
             this.listBox1.Visible = false;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -348,6 +350,8 @@ namespace GUI
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label8);
+            this.tabPage4.Controls.Add(this.label7);
             this.tabPage4.Controls.Add(this.button6);
             this.tabPage4.Controls.Add(this.textBox7);
             this.tabPage4.Controls.Add(this.textBox6);
@@ -355,46 +359,64 @@ namespace GUI
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(296, 324);
+            this.tabPage4.Size = new System.Drawing.Size(307, 324);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Ustawienia";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(6, 87);
+            this.button6.Location = new System.Drawing.Point(6, 121);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 23);
+            this.button6.Size = new System.Drawing.Size(107, 23);
             this.button6.TabIndex = 15;
-            this.button6.Text = "Zmień hasło dostępu";
+            this.button6.Text = "Zmień";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Visible = false;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(6, 61);
+            this.textBox7.Location = new System.Drawing.Point(6, 95);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.Size = new System.Drawing.Size(107, 20);
             this.textBox7.TabIndex = 14;
             this.textBox7.Visible = false;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(6, 6);
+            this.textBox6.Location = new System.Drawing.Point(6, 20);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.Size = new System.Drawing.Size(107, 20);
             this.textBox6.TabIndex = 12;
             this.textBox6.Visible = false;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(6, 32);
+            this.button5.Location = new System.Drawing.Point(6, 46);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 23);
+            this.button5.Size = new System.Drawing.Size(107, 23);
             this.button5.TabIndex = 13;
-            this.button5.Text = "Zmień salt";
+            this.button5.Text = "Zmień";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 79);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Hasło dostępu";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(25, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Salt";
             // 
             // Form1
             // 
@@ -452,6 +474,8 @@ namespace GUI
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }
 
