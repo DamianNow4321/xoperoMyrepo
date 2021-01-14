@@ -92,7 +92,7 @@ namespace GUI
             // 
             this.button1.Location = new System.Drawing.Point(10, 122);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.Size = new System.Drawing.Size(112, 23);
             this.button1.TabIndex = 6;
             this.button1.Text = "Dodaj";
             this.button1.UseVisualStyleBackColor = true;
@@ -103,7 +103,7 @@ namespace GUI
             // 
             this.textBox3.Location = new System.Drawing.Point(10, 96);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(112, 20);
             this.textBox3.TabIndex = 5;
             this.textBox3.Visible = false;
             // 
@@ -111,7 +111,7 @@ namespace GUI
             // 
             this.textBox2.Location = new System.Drawing.Point(10, 59);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(112, 20);
             this.textBox2.TabIndex = 4;
             this.textBox2.Visible = false;
             // 
@@ -119,7 +119,7 @@ namespace GUI
             // 
             this.textBox1.Location = new System.Drawing.Point(10, 23);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(112, 20);
             this.textBox1.TabIndex = 3;
             this.textBox1.Visible = false;
             // 
