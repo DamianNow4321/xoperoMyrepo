@@ -43,7 +43,6 @@ namespace GUI
             this.button3 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -64,6 +63,12 @@ namespace GUI
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.NazwaWiz = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.LoginWiz = new System.Windows.Forms.TextBox();
+            this.HasWiz = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -152,12 +157,17 @@ namespace GUI
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.HasWiz);
+            this.tabPage1.Controls.Add(this.LoginWiz);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.NazwaWiz);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.textBox4);
             this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.richTextBox1);
             this.tabPage1.Controls.Add(this.listBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -166,6 +176,7 @@ namespace GUI
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Menedżer Haseł";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // button4
             // 
@@ -212,15 +223,6 @@ namespace GUI
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(128, 86);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(173, 225);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.Visible = false;
             // 
             // listBox1
             // 
@@ -343,7 +345,7 @@ namespace GUI
             this.listBox2.FormattingEnabled = true;
             this.listBox2.Location = new System.Drawing.Point(19, 25);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 277);
+            this.listBox2.Size = new System.Drawing.Size(137, 277);
             this.listBox2.TabIndex = 0;
             this.listBox2.Visible = false;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
@@ -418,6 +420,57 @@ namespace GUI
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Visible = false;
             // 
+            // NazwaWiz
+            // 
+            this.NazwaWiz.Location = new System.Drawing.Point(128, 103);
+            this.NazwaWiz.Name = "NazwaWiz";
+            this.NazwaWiz.ReadOnly = true;
+            this.NazwaWiz.Size = new System.Drawing.Size(173, 20);
+            this.NazwaWiz.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(128, 87);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Nazwa";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(125, 126);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Login";
+            // 
+            // LoginWiz
+            // 
+            this.LoginWiz.Location = new System.Drawing.Point(128, 143);
+            this.LoginWiz.Name = "LoginWiz";
+            this.LoginWiz.ReadOnly = true;
+            this.LoginWiz.Size = new System.Drawing.Size(173, 20);
+            this.LoginWiz.TabIndex = 12;
+            // 
+            // HasWiz
+            // 
+            this.HasWiz.Location = new System.Drawing.Point(128, 182);
+            this.HasWiz.Name = "HasWiz";
+            this.HasWiz.ReadOnly = true;
+            this.HasWiz.Size = new System.Drawing.Size(173, 20);
+            this.HasWiz.TabIndex = 13;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(125, 166);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 13);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Hasło";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,7 +505,6 @@ namespace GUI
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TextBox textBox5;
@@ -476,6 +528,12 @@ namespace GUI
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox HasWiz;
+        private System.Windows.Forms.TextBox LoginWiz;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox NazwaWiz;
     }
 }
 
