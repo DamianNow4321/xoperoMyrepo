@@ -38,6 +38,12 @@ namespace GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.HasWiz = new System.Windows.Forms.TextBox();
+            this.LoginWiz = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.NazwaWiz = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -63,12 +69,7 @@ namespace GUI
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.NazwaWiz = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.LoginWiz = new System.Windows.Forms.TextBox();
-            this.HasWiz = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -157,6 +158,7 @@ namespace GUI
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.HasWiz);
             this.tabPage1.Controls.Add(this.LoginWiz);
@@ -177,6 +179,57 @@ namespace GUI
             this.tabPage1.Text = "Menedżer Haseł";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(125, 179);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 13);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Hasło";
+            // 
+            // HasWiz
+            // 
+            this.HasWiz.Location = new System.Drawing.Point(128, 195);
+            this.HasWiz.Name = "HasWiz";
+            this.HasWiz.ReadOnly = true;
+            this.HasWiz.Size = new System.Drawing.Size(173, 20);
+            this.HasWiz.TabIndex = 13;
+            // 
+            // LoginWiz
+            // 
+            this.LoginWiz.Location = new System.Drawing.Point(128, 156);
+            this.LoginWiz.Name = "LoginWiz";
+            this.LoginWiz.ReadOnly = true;
+            this.LoginWiz.Size = new System.Drawing.Size(173, 20);
+            this.LoginWiz.TabIndex = 12;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(125, 140);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Login";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(125, 101);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Nazwa";
+            // 
+            // NazwaWiz
+            // 
+            this.NazwaWiz.Location = new System.Drawing.Point(128, 117);
+            this.NazwaWiz.Name = "NazwaWiz";
+            this.NazwaWiz.ReadOnly = true;
+            this.NazwaWiz.Size = new System.Drawing.Size(173, 20);
+            this.NazwaWiz.TabIndex = 9;
             // 
             // button4
             // 
@@ -207,7 +260,7 @@ namespace GUI
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(128, 57);
+            this.textBox4.Location = new System.Drawing.Point(128, 78);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(173, 20);
             this.textBox4.TabIndex = 3;
@@ -215,9 +268,9 @@ namespace GUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(3, 57);
+            this.button2.Location = new System.Drawing.Point(3, 62);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 23);
+            this.button2.Size = new System.Drawing.Size(119, 38);
             this.button2.TabIndex = 2;
             this.button2.Text = "Wyszukaj";
             this.button2.UseVisualStyleBackColor = true;
@@ -227,9 +280,9 @@ namespace GUI
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(3, 86);
+            this.listBox1.Location = new System.Drawing.Point(3, 106);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(119, 225);
+            this.listBox1.Size = new System.Drawing.Size(119, 212);
             this.listBox1.TabIndex = 0;
             this.listBox1.Visible = false;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -420,56 +473,14 @@ namespace GUI
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Visible = false;
             // 
-            // NazwaWiz
+            // label12
             // 
-            this.NazwaWiz.Location = new System.Drawing.Point(128, 103);
-            this.NazwaWiz.Name = "NazwaWiz";
-            this.NazwaWiz.ReadOnly = true;
-            this.NazwaWiz.Size = new System.Drawing.Size(173, 20);
-            this.NazwaWiz.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(128, 87);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Nazwa";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(125, 126);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Login";
-            // 
-            // LoginWiz
-            // 
-            this.LoginWiz.Location = new System.Drawing.Point(128, 143);
-            this.LoginWiz.Name = "LoginWiz";
-            this.LoginWiz.ReadOnly = true;
-            this.LoginWiz.Size = new System.Drawing.Size(173, 20);
-            this.LoginWiz.TabIndex = 12;
-            // 
-            // HasWiz
-            // 
-            this.HasWiz.Location = new System.Drawing.Point(128, 182);
-            this.HasWiz.Name = "HasWiz";
-            this.HasWiz.ReadOnly = true;
-            this.HasWiz.Size = new System.Drawing.Size(173, 20);
-            this.HasWiz.TabIndex = 13;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(125, 166);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 13);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Hasło";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(125, 62);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 13);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "Nazwa";
             // 
             // Form1
             // 
@@ -534,6 +545,7 @@ namespace GUI
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox NazwaWiz;
+        private System.Windows.Forms.Label label12;
     }
 }
 
