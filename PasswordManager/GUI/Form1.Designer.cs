@@ -38,6 +38,7 @@ namespace GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.HasWiz = new System.Windows.Forms.TextBox();
             this.LoginWiz = new System.Windows.Forms.TextBox();
@@ -69,7 +70,6 @@ namespace GUI
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.label12 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -179,6 +179,15 @@ namespace GUI
             this.tabPage1.Text = "Menedżer Haseł";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(125, 62);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 13);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "Nazwa";
             // 
             // label11
             // 
@@ -446,6 +455,7 @@ namespace GUI
             this.button6.Text = "Zmień hasło dostępu";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // textBox7
             // 
@@ -472,15 +482,6 @@ namespace GUI
             this.button5.Text = "Zmień salt";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Visible = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(125, 62);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 13);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Nazwa";
             // 
             // Form1
             // 

@@ -1,8 +1,6 @@
 ﻿using PasswordManager;
 using System;
 using System.Collections.Generic;
-using Newtonsoft;
-using System.Text;
 
 namespace CLI
 {
