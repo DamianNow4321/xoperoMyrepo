@@ -147,7 +147,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasenStr214", "BasenStr214\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnesyStr213", "MagnesyStr213\MagnesyStr213.csproj", "{659592FB-6C03-4F93-B370-5470180E186E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasenStr301", "BasenStr301\BasenStr301.csproj", "{57C72B18-A7FF-4136-8599-8936F44772EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasenStr301", "BasenStr301\BasenStr301.csproj", "{57C72B18-A7FF-4136-8599-8936F44772EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProstyEdytorTekstuWPFStr572", "ProstyEdytorTekstuWPFStr572\ProstyEdytorTekstuWPFStr572.csproj", "{B3148D45-28A6-4E17-AB98-43C5017C754D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -447,6 +449,10 @@ Global
 		{57C72B18-A7FF-4136-8599-8936F44772EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57C72B18-A7FF-4136-8599-8936F44772EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57C72B18-A7FF-4136-8599-8936F44772EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3148D45-28A6-4E17-AB98-43C5017C754D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3148D45-28A6-4E17-AB98-43C5017C754D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3148D45-28A6-4E17-AB98-43C5017C754D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3148D45-28A6-4E17-AB98-43C5017C754D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
