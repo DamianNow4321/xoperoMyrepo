@@ -124,7 +124,6 @@ namespace PasswordManager
             }
             System.IO.File.WriteAllText(pthPass, salt);
         }
-
         public static string loadMasterPassword(string MpassC)
         {
             string fileName = "mpass";
@@ -165,7 +164,6 @@ namespace PasswordManager
                 return false;
             }
         }
-
        public static bool changeEntry(string name, string login, string password)
         {
             string fileName = name+".json";

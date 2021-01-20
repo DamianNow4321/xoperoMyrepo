@@ -38,8 +38,9 @@ namespace GUI
             if (Entry.pth != null)
             {
                 objEntry = Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
-                richTextBox1.Text = "Nazwa: " + objEntry[listBox1.SelectedIndex].Name + Environment.NewLine + "Login: " + objEntry[listBox1.SelectedIndex].Login
-                + Environment.NewLine + "Hasło: " + objEntry[listBox1.SelectedIndex].Password;
+                NazwaWiz.Text = objEntry[listBox1.SelectedIndex].Name;
+                LoginWiz.Text = objEntry[listBox1.SelectedIndex].Login;
+                HasWiz.Text = objEntry[listBox1.SelectedIndex].Password;
             }
         }
         private void button2_Click(object sender, EventArgs e)
@@ -61,7 +62,6 @@ namespace GUI
                 {
                     textBox4.Visible = true;
                     listBox1.Visible = true;
-                    richTextBox1.Visible = true;
                     button2.Visible = true;
                     textBox1.Visible = true;
                     textBox2.Visible = true;
@@ -132,6 +132,11 @@ namespace GUI
             objEntry = Entry.readFileAlt("b14ca5898a4e4133bbce2ea2315a1916");
             listBox1.DataSource = objEntry;
             listBox2.DataSource = objEntry;
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
